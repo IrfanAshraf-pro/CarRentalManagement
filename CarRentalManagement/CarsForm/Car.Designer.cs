@@ -462,6 +462,7 @@ namespace CarRentalManagement.CarsForm
             this.kryptonComboBox3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
             this.kryptonComboBox3.Size = new System.Drawing.Size(235, 21);
             this.kryptonComboBox3.TabIndex = 25;
+            this.kryptonComboBox3.Text = "Available or not";
             // 
             // xuiSuperButton4
             // 

@@ -41,5 +41,10 @@ namespace CarRentalManagement
         {
             openChild(new CarsForm.Car());
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            openChild(new Customer.Customer());
+        }
     }
 }

@@ -31,7 +31,6 @@ namespace CarRentalManagement
         {
             this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
             this.btnDashboard = new XanderUI.XUISuperButton();
-            this.btnAvailable = new XanderUI.XUISuperButton();
             this.btnReturn = new XanderUI.XUISuperButton();
             this.btnRental = new XanderUI.XUISuperButton();
             this.btnCustomer = new XanderUI.XUISuperButton();
@@ -54,7 +53,6 @@ namespace CarRentalManagement
             this.xuiSlidingPanel1.CollapseControl = null;
             this.xuiSlidingPanel1.Collapsed = true;
             this.xuiSlidingPanel1.Controls.Add(this.btnDashboard);
-            this.xuiSlidingPanel1.Controls.Add(this.btnAvailable);
             this.xuiSlidingPanel1.Controls.Add(this.btnReturn);
             this.xuiSlidingPanel1.Controls.Add(this.btnRental);
             this.xuiSlidingPanel1.Controls.Add(this.btnCustomer);
@@ -86,7 +84,7 @@ namespace CarRentalManagement
             this.btnDashboard.HoverBackgroundColor = System.Drawing.Color.DarkBlue;
             this.btnDashboard.HoverTextColor = System.Drawing.Color.White;
             this.btnDashboard.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnDashboard.Location = new System.Drawing.Point(9, 479);
+            this.btnDashboard.Location = new System.Drawing.Point(9, 424);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.SelectedBackColor = System.Drawing.Color.BlueViolet;
             this.btnDashboard.SelectedTextColor = System.Drawing.Color.White;
@@ -95,29 +93,6 @@ namespace CarRentalManagement
             this.btnDashboard.TabIndex = 9;
             this.btnDashboard.TextColor = System.Drawing.Color.White;
             this.btnDashboard.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // btnAvailable
-            // 
-            this.btnAvailable.BackgroundColor = System.Drawing.Color.LightSlateGray;
-            this.btnAvailable.ButtonImage = global::CarRentalManagement.Properties.Resources.available_removebg_preview;
-            this.btnAvailable.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.btnAvailable.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.btnAvailable.ButtonText = "Available";
-            this.btnAvailable.CornerRadius = 24;
-            this.btnAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvailable.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnAvailable.HoverBackgroundColor = System.Drawing.Color.DarkBlue;
-            this.btnAvailable.HoverTextColor = System.Drawing.Color.White;
-            this.btnAvailable.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnAvailable.Location = new System.Drawing.Point(11, 418);
-            this.btnAvailable.Name = "btnAvailable";
-            this.btnAvailable.SelectedBackColor = System.Drawing.Color.BlueViolet;
-            this.btnAvailable.SelectedTextColor = System.Drawing.Color.White;
-            this.btnAvailable.Size = new System.Drawing.Size(205, 40);
-            this.btnAvailable.SuperSelected = false;
-            this.btnAvailable.TabIndex = 8;
-            this.btnAvailable.TextColor = System.Drawing.Color.White;
-            this.btnAvailable.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // btnReturn
             // 
@@ -187,6 +162,7 @@ namespace CarRentalManagement
             this.btnCustomer.TabIndex = 5;
             this.btnCustomer.TextColor = System.Drawing.Color.White;
             this.btnCustomer.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnAddCar
             // 
@@ -304,7 +280,6 @@ namespace CarRentalManagement
         private XanderUI.XUISuperButton btnRental;
         private XanderUI.XUISuperButton btnCustomer;
         private XanderUI.XUISuperButton btnReturn;
-        private XanderUI.XUISuperButton btnAvailable;
         private XanderUI.XUISuperButton btnDashboard;
         private System.Windows.Forms.Label label1;
     }
