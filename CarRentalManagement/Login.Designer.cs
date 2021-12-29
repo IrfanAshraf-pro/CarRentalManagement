@@ -30,6 +30,7 @@ namespace CarRentalManagement
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogin = new XanderUI.XUIButton();
             this.lblCredentialError = new System.Windows.Forms.Label();
             this.txtPasswordLoginAdmin = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtsAdminLogin = new Guna.UI.WinForms.GunaLineTextBox();
@@ -40,7 +41,6 @@ namespace CarRentalManagement
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnLogin = new XanderUI.XUIButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -62,14 +62,36 @@ namespace CarRentalManagement
             this.panel2.Size = new System.Drawing.Size(398, 466);
             this.panel2.TabIndex = 0;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.btnLogin.ButtonImage = global::CarRentalManagement.Properties.Resources.icon_removebg_preview;
+            this.btnLogin.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnLogin.ButtonText = "Login";
+            this.btnLogin.ClickBackColor = System.Drawing.Color.Navy;
+            this.btnLogin.ClickTextColor = System.Drawing.Color.White;
+            this.btnLogin.CornerRadius = 25;
+            this.btnLogin.Font = new System.Drawing.Font("Lucida Handwriting", 18F);
+            this.btnLogin.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnLogin.HoverBackgroundColor = System.Drawing.Color.Honeydew;
+            this.btnLogin.HoverTextColor = System.Drawing.Color.Navy;
+            this.btnLogin.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnLogin.Location = new System.Drawing.Point(136, 330);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(184, 50);
+            this.btnLogin.TabIndex = 14;
+            this.btnLogin.TextColor = System.Drawing.Color.MediumBlue;
+            this.btnLogin.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // lblCredentialError
             // 
             this.lblCredentialError.AutoSize = true;
-            this.lblCredentialError.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCredentialError.ForeColor = System.Drawing.Color.Red;
+            this.lblCredentialError.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCredentialError.ForeColor = System.Drawing.Color.Orange;
             this.lblCredentialError.Location = new System.Drawing.Point(47, 279);
             this.lblCredentialError.Name = "lblCredentialError";
-            this.lblCredentialError.Size = new System.Drawing.Size(0, 14);
+            this.lblCredentialError.Size = new System.Drawing.Size(0, 18);
             this.lblCredentialError.TabIndex = 11;
             // 
             // txtPasswordLoginAdmin
@@ -77,7 +99,7 @@ namespace CarRentalManagement
             this.txtPasswordLoginAdmin.BackColor = System.Drawing.Color.MediumBlue;
             this.txtPasswordLoginAdmin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPasswordLoginAdmin.FocusedLineColor = System.Drawing.Color.Honeydew;
-            this.txtPasswordLoginAdmin.Font = new System.Drawing.Font("Calibri", 11F);
+            this.txtPasswordLoginAdmin.Font = new System.Drawing.Font("Calibri", 14F);
             this.txtPasswordLoginAdmin.ForeColor = System.Drawing.Color.Honeydew;
             this.txtPasswordLoginAdmin.LineColor = System.Drawing.Color.Honeydew;
             this.txtPasswordLoginAdmin.Location = new System.Drawing.Point(159, 214);
@@ -92,7 +114,7 @@ namespace CarRentalManagement
             this.txtsAdminLogin.BackColor = System.Drawing.Color.MediumBlue;
             this.txtsAdminLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsAdminLogin.FocusedLineColor = System.Drawing.Color.Honeydew;
-            this.txtsAdminLogin.Font = new System.Drawing.Font("Calibri", 11F);
+            this.txtsAdminLogin.Font = new System.Drawing.Font("Calibri", 14F);
             this.txtsAdminLogin.ForeColor = System.Drawing.Color.Honeydew;
             this.txtsAdminLogin.LineColor = System.Drawing.Color.Honeydew;
             this.txtsAdminLogin.Location = new System.Drawing.Point(159, 124);
@@ -106,11 +128,11 @@ namespace CarRentalManagement
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.MediumBlue;
-            this.label13.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Lucida Handwriting", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Honeydew;
             this.label13.Location = new System.Drawing.Point(200, 395);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 27);
+            this.label13.Size = new System.Drawing.Size(76, 28);
             this.label13.TabIndex = 8;
             this.label13.Text = "clear";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -143,11 +165,11 @@ namespace CarRentalManagement
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Calibri", 35F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Lucida Handwriting", 35F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Honeydew;
-            this.label10.Location = new System.Drawing.Point(149, 41);
+            this.label10.Location = new System.Drawing.Point(125, 36);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 58);
+            this.label10.Size = new System.Drawing.Size(181, 61);
             this.label10.TabIndex = 4;
             this.label10.Text = "Login";
             // 
@@ -155,11 +177,11 @@ namespace CarRentalManagement
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Honeydew;
-            this.label8.Font = new System.Drawing.Font("Calibri", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Lucida Handwriting", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(12, 21);
+            this.label8.Location = new System.Drawing.Point(-3, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(367, 41);
+            this.label8.Size = new System.Drawing.Size(403, 34);
             this.label8.TabIndex = 2;
             this.label8.Text = "Car Rental Management";
             // 
@@ -167,11 +189,11 @@ namespace CarRentalManagement
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Honeydew;
-            this.label9.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Lucida Handwriting", 25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
             this.label9.Location = new System.Drawing.Point(60, 395);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(246, 41);
+            this.label9.Size = new System.Drawing.Size(321, 44);
             this.label9.TabIndex = 3;
             this.label9.Text = "Choose the Best!";
             // 
@@ -186,28 +208,6 @@ namespace CarRentalManagement
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.btnLogin.ButtonImage = global::CarRentalManagement.Properties.Resources.icon_removebg_preview;
-            this.btnLogin.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnLogin.ButtonText = "Login";
-            this.btnLogin.ClickBackColor = System.Drawing.Color.Navy;
-            this.btnLogin.ClickTextColor = System.Drawing.Color.White;
-            this.btnLogin.CornerRadius = 25;
-            this.btnLogin.Font = new System.Drawing.Font("Calibri", 18F);
-            this.btnLogin.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnLogin.HoverBackgroundColor = System.Drawing.Color.Honeydew;
-            this.btnLogin.HoverTextColor = System.Drawing.Color.Navy;
-            this.btnLogin.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnLogin.Location = new System.Drawing.Point(136, 330);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(184, 50);
-            this.btnLogin.TabIndex = 14;
-            this.btnLogin.TextColor = System.Drawing.Color.MediumBlue;
-            this.btnLogin.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Login
             // 
