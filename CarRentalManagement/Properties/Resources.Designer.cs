@@ -63,6 +63,16 @@ namespace CarRentalManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1970charger {
+            get {
+                object obj = ResourceManager.GetObject("1970charger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2020_charger_srt_thumb_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("2020-charger-srt-thumb-removebg-preview", resourceCulture);
@@ -123,9 +133,39 @@ namespace CarRentalManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap charger2 {
+            get {
+                object obj = ResourceManager.GetObject("charger2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap charger3 {
+            get {
+                object obj = ResourceManager.GetObject("charger3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("download-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fcar_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("fcar-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

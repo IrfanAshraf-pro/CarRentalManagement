@@ -1,7 +1,7 @@
 ﻿
 namespace CarRentalManagement.Customer
 {
-    partial class AddCustomer
+    partial class Customer
     {
         /// <summary>
         /// Required designer variable.

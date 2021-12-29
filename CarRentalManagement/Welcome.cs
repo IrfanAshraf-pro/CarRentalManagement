@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CarRentalManagement.Customer
+namespace CarRentalManagement
 {
-    public partial class AddCustomer : Form
+    public partial class Welcome : Form
     {
-        public AddCustomer()
+        public Welcome()
         {
             InitializeComponent();
         }

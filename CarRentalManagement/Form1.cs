@@ -19,13 +19,14 @@ namespace CarRentalManagement
            
         }
 
-     
-
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Login f = new Login();
+            //Login f = new Login();
+            //this.Hide();
+            //f.Show();
+            MainForm mf = new MainForm();
+            mf.Show();
             this.Hide();
-            f.Show();
         }
     }
 }

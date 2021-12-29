@@ -31,5 +31,15 @@ namespace CarRentalManagement
             f.Show();
         }
         #endregion
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            openChild(new Welcome());
+        }
+
+        private void btnAddCar_Click(object sender, EventArgs e)
+        {
+            openChild(new CarsForm.Car());
+        }
     }
 }
