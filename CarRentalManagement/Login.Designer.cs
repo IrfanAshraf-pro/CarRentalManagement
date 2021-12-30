@@ -32,8 +32,6 @@ namespace CarRentalManagement
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogin = new XanderUI.XUIButton();
             this.lblCredentialError = new System.Windows.Forms.Label();
-            this.txtPasswordLoginAdmin = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txtsAdminLogin = new Guna.UI.WinForms.GunaLineTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -41,6 +39,8 @@ namespace CarRentalManagement
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtsAdminLogin = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.txtPasswordLogin = new ReaLTaiizor.Controls.DungeonTextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -48,10 +48,10 @@ namespace CarRentalManagement
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel2.Controls.Add(this.txtPasswordLogin);
+            this.panel2.Controls.Add(this.txtsAdminLogin);
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.lblCredentialError);
-            this.panel2.Controls.Add(this.txtPasswordLoginAdmin);
-            this.panel2.Controls.Add(this.txtsAdminLogin);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
@@ -76,7 +76,7 @@ namespace CarRentalManagement
             this.btnLogin.HoverBackgroundColor = System.Drawing.Color.Honeydew;
             this.btnLogin.HoverTextColor = System.Drawing.Color.Navy;
             this.btnLogin.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnLogin.Location = new System.Drawing.Point(136, 330);
+            this.btnLogin.Location = new System.Drawing.Point(136, 307);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(184, 50);
             this.btnLogin.TabIndex = 14;
@@ -94,43 +94,13 @@ namespace CarRentalManagement
             this.lblCredentialError.Size = new System.Drawing.Size(0, 18);
             this.lblCredentialError.TabIndex = 11;
             // 
-            // txtPasswordLoginAdmin
-            // 
-            this.txtPasswordLoginAdmin.BackColor = System.Drawing.Color.MediumBlue;
-            this.txtPasswordLoginAdmin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPasswordLoginAdmin.FocusedLineColor = System.Drawing.Color.Honeydew;
-            this.txtPasswordLoginAdmin.Font = new System.Drawing.Font("Calibri", 14F);
-            this.txtPasswordLoginAdmin.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtPasswordLoginAdmin.LineColor = System.Drawing.Color.Honeydew;
-            this.txtPasswordLoginAdmin.Location = new System.Drawing.Point(159, 214);
-            this.txtPasswordLoginAdmin.Name = "txtPasswordLoginAdmin";
-            this.txtPasswordLoginAdmin.PasswordChar = '\0';
-            this.txtPasswordLoginAdmin.SelectedText = "";
-            this.txtPasswordLoginAdmin.Size = new System.Drawing.Size(186, 35);
-            this.txtPasswordLoginAdmin.TabIndex = 10;
-            // 
-            // txtsAdminLogin
-            // 
-            this.txtsAdminLogin.BackColor = System.Drawing.Color.MediumBlue;
-            this.txtsAdminLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsAdminLogin.FocusedLineColor = System.Drawing.Color.Honeydew;
-            this.txtsAdminLogin.Font = new System.Drawing.Font("Calibri", 14F);
-            this.txtsAdminLogin.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtsAdminLogin.LineColor = System.Drawing.Color.Honeydew;
-            this.txtsAdminLogin.Location = new System.Drawing.Point(159, 124);
-            this.txtsAdminLogin.Name = "txtsAdminLogin";
-            this.txtsAdminLogin.PasswordChar = '\0';
-            this.txtsAdminLogin.SelectedText = "";
-            this.txtsAdminLogin.Size = new System.Drawing.Size(186, 35);
-            this.txtsAdminLogin.TabIndex = 9;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.MediumBlue;
             this.label13.Font = new System.Drawing.Font("Lucida Handwriting", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Honeydew;
-            this.label13.Location = new System.Drawing.Point(200, 395);
+            this.label13.Location = new System.Drawing.Point(183, 370);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(76, 28);
             this.label13.TabIndex = 8;
@@ -209,6 +179,40 @@ namespace CarRentalManagement
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // txtsAdminLogin
+            // 
+            this.txtsAdminLogin.BackColor = System.Drawing.Color.Transparent;
+            this.txtsAdminLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtsAdminLogin.EdgeColor = System.Drawing.Color.White;
+            this.txtsAdminLogin.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtsAdminLogin.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtsAdminLogin.Location = new System.Drawing.Point(159, 131);
+            this.txtsAdminLogin.MaxLength = 32767;
+            this.txtsAdminLogin.Multiline = false;
+            this.txtsAdminLogin.Name = "txtsAdminLogin";
+            this.txtsAdminLogin.ReadOnly = false;
+            this.txtsAdminLogin.Size = new System.Drawing.Size(196, 28);
+            this.txtsAdminLogin.TabIndex = 29;
+            this.txtsAdminLogin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtsAdminLogin.UseSystemPasswordChar = false;
+            // 
+            // txtPasswordLogin
+            // 
+            this.txtPasswordLogin.BackColor = System.Drawing.Color.Transparent;
+            this.txtPasswordLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtPasswordLogin.EdgeColor = System.Drawing.Color.White;
+            this.txtPasswordLogin.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPasswordLogin.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtPasswordLogin.Location = new System.Drawing.Point(159, 215);
+            this.txtPasswordLogin.MaxLength = 32767;
+            this.txtPasswordLogin.Multiline = false;
+            this.txtPasswordLogin.Name = "txtPasswordLogin";
+            this.txtPasswordLogin.ReadOnly = false;
+            this.txtPasswordLogin.Size = new System.Drawing.Size(196, 28);
+            this.txtPasswordLogin.TabIndex = 30;
+            this.txtPasswordLogin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPasswordLogin.UseSystemPasswordChar = false;
+            // 
             // Login
             // 
             this.ClientSize = new System.Drawing.Size(802, 466);
@@ -248,10 +252,10 @@ namespace CarRentalManagement
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private Guna.UI.WinForms.GunaLineTextBox txtPasswordLoginAdmin;
-        private Guna.UI.WinForms.GunaLineTextBox txtsAdminLogin;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblCredentialError;
         private XanderUI.XUIButton btnLogin;
+        private ReaLTaiizor.Controls.DungeonTextBox txtPasswordLogin;
+        private ReaLTaiizor.Controls.DungeonTextBox txtsAdminLogin;
     }
 }

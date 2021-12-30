@@ -28,8 +28,8 @@ namespace CarRentalManagement
         private void label13_Click(object sender, EventArgs e)
         {
 
-            txtPasswordLoginAdmin.Text = "";
             txtsAdminLogin.Text = "";
+            txtPasswordLogin.Text = "";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace CarRentalManagement
             {
                 LoginLogic a = new LoginLogic();
                 a.name = txtsAdminLogin.Text;
-                a.password = txtPasswordLoginAdmin.Text;
+                a.password = txtPasswordLogin.Text;
                 String patternName = @"^[a-zA-Z]+$";
                 String patternPass = @"^\d+$";
                 if (a.name != String.Empty && a.password != String.Empty)
@@ -55,7 +55,7 @@ namespace CarRentalManagement
                             }
                             else
                             {
-                                txtPasswordLoginAdmin.Text = "";
+                                txtPasswordLogin.Text = "";
                                 txtsAdminLogin.Text = "";
                                 ErrorShow("Please Provide Correct Credentials");
                             }

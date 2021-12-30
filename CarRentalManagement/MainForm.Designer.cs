@@ -208,7 +208,7 @@ namespace CarRentalManagement
             this.xuiGradientPanel1.Location = new System.Drawing.Point(230, 0);
             this.xuiGradientPanel1.Name = "xuiGradientPanel1";
             this.xuiGradientPanel1.PrimerColor = System.Drawing.Color.White;
-            this.xuiGradientPanel1.Size = new System.Drawing.Size(889, 104);
+            this.xuiGradientPanel1.Size = new System.Drawing.Size(889, 124);
             this.xuiGradientPanel1.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
             this.xuiGradientPanel1.TabIndex = 4;
             this.xuiGradientPanel1.TopLeft = System.Drawing.Color.DodgerBlue;
@@ -220,7 +220,7 @@ namespace CarRentalManagement
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 30F);
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(12, 30);
+            this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(744, 52);
             this.label1.TabIndex = 0;
@@ -229,10 +229,11 @@ namespace CarRentalManagement
             // panelMainShowForms
             // 
             this.panelMainShowForms.BackColor = System.Drawing.Color.Snow;
-            this.panelMainShowForms.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelMainShowForms.Location = new System.Drawing.Point(251, 104);
+            this.panelMainShowForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainShowForms.Location = new System.Drawing.Point(230, 124);
+            this.panelMainShowForms.Margin = new System.Windows.Forms.Padding(0);
             this.panelMainShowForms.Name = "panelMainShowForms";
-            this.panelMainShowForms.Size = new System.Drawing.Size(868, 606);
+            this.panelMainShowForms.Size = new System.Drawing.Size(889, 586);
             this.panelMainShowForms.TabIndex = 5;
             // 
             // pictureBox2
