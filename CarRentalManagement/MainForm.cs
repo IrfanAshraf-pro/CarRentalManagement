@@ -46,5 +46,35 @@ namespace CarRentalManagement
         {
             openChild(new Customer.Customer());
         }
+
+        private void btnRental_Click(object sender, EventArgs e)
+        {
+            openChild(new Functionality.RentForm());
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            openChild(new Functionality.ReturnForm());
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            openChild(new Functionality.DashBoard());
+        }
+
+        private void btnRental_Click_1(object sender, EventArgs e)
+        {
+            openChild(new Functionality.RentForm());
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
+        {
+            openChild(new Functionality.DashBoard());
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

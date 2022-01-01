@@ -29,13 +29,18 @@ namespace CarRentalManagement.CarsForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
+            this.dungeonTextBox3 = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.dungeonTextBox5 = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.dungeonTextBox4 = new ReaLTaiizor.Controls.DungeonTextBox();
             this.xuiSuperButton3 = new XanderUI.XUISuperButton();
             this.xuiSuperButton2 = new XanderUI.XUISuperButton();
             this.xuiSuperButton1 = new XanderUI.XUISuperButton();
@@ -48,13 +53,6 @@ namespace CarRentalManagement.CarsForm
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.xuiGradientPanel2 = new XanderUI.XUIGradientPanel();
-            this.xuiSuperButton4 = new XanderUI.XUISuperButton();
-            this.kryptonComboBox3 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.dungeonTextBox4 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox3 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox5 = new ReaLTaiizor.Controls.DungeonTextBox();
             this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +61,14 @@ namespace CarRentalManagement.CarsForm
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xuiSuperButton4 = new XanderUI.XUISuperButton();
+            this.kryptonComboBox3 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.xuiGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             this.xuiGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +77,7 @@ namespace CarRentalManagement.CarsForm
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 38F);
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(479, 28);
+            this.label1.Location = new System.Drawing.Point(479, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 66);
             this.label1.TabIndex = 0;
@@ -129,7 +129,7 @@ namespace CarRentalManagement.CarsForm
             this.xuiGradientPanel1.Controls.Add(this.label4);
             this.xuiGradientPanel1.Controls.Add(this.label2);
             this.xuiGradientPanel1.Controls.Add(this.label3);
-            this.xuiGradientPanel1.Location = new System.Drawing.Point(0, 107);
+            this.xuiGradientPanel1.Location = new System.Drawing.Point(0, 93);
             this.xuiGradientPanel1.Name = "xuiGradientPanel1";
             this.xuiGradientPanel1.PrimerColor = System.Drawing.Color.White;
             this.xuiGradientPanel1.Size = new System.Drawing.Size(387, 484);
@@ -137,6 +137,91 @@ namespace CarRentalManagement.CarsForm
             this.xuiGradientPanel1.TabIndex = 11;
             this.xuiGradientPanel1.TopLeft = System.Drawing.Color.DarkTurquoise;
             this.xuiGradientPanel1.TopRight = System.Drawing.Color.DarkTurquoise;
+            // 
+            // dungeonTextBox3
+            // 
+            this.dungeonTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.dungeonTextBox3.EdgeColor = System.Drawing.Color.White;
+            this.dungeonTextBox3.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dungeonTextBox3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.dungeonTextBox3.Location = new System.Drawing.Point(175, 231);
+            this.dungeonTextBox3.MaxLength = 32767;
+            this.dungeonTextBox3.Multiline = false;
+            this.dungeonTextBox3.Name = "dungeonTextBox3";
+            this.dungeonTextBox3.ReadOnly = false;
+            this.dungeonTextBox3.Size = new System.Drawing.Size(196, 28);
+            this.dungeonTextBox3.TabIndex = 32;
+            this.dungeonTextBox3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dungeonTextBox3.UseSystemPasswordChar = false;
+            // 
+            // dungeonTextBox5
+            // 
+            this.dungeonTextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.dungeonTextBox5.EdgeColor = System.Drawing.Color.White;
+            this.dungeonTextBox5.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dungeonTextBox5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.dungeonTextBox5.Location = new System.Drawing.Point(175, 179);
+            this.dungeonTextBox5.MaxLength = 32767;
+            this.dungeonTextBox5.Multiline = false;
+            this.dungeonTextBox5.Name = "dungeonTextBox5";
+            this.dungeonTextBox5.ReadOnly = false;
+            this.dungeonTextBox5.Size = new System.Drawing.Size(196, 28);
+            this.dungeonTextBox5.TabIndex = 31;
+            this.dungeonTextBox5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dungeonTextBox5.UseSystemPasswordChar = false;
+            // 
+            // dungeonTextBox2
+            // 
+            this.dungeonTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.dungeonTextBox2.EdgeColor = System.Drawing.Color.White;
+            this.dungeonTextBox2.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dungeonTextBox2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.dungeonTextBox2.Location = new System.Drawing.Point(175, 278);
+            this.dungeonTextBox2.MaxLength = 32767;
+            this.dungeonTextBox2.Multiline = false;
+            this.dungeonTextBox2.Name = "dungeonTextBox2";
+            this.dungeonTextBox2.ReadOnly = false;
+            this.dungeonTextBox2.Size = new System.Drawing.Size(196, 28);
+            this.dungeonTextBox2.TabIndex = 30;
+            this.dungeonTextBox2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dungeonTextBox2.UseSystemPasswordChar = false;
+            // 
+            // dungeonTextBox1
+            // 
+            this.dungeonTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.dungeonTextBox1.EdgeColor = System.Drawing.Color.White;
+            this.dungeonTextBox1.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dungeonTextBox1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.dungeonTextBox1.Location = new System.Drawing.Point(176, 124);
+            this.dungeonTextBox1.MaxLength = 32767;
+            this.dungeonTextBox1.Multiline = false;
+            this.dungeonTextBox1.Name = "dungeonTextBox1";
+            this.dungeonTextBox1.ReadOnly = false;
+            this.dungeonTextBox1.Size = new System.Drawing.Size(196, 28);
+            this.dungeonTextBox1.TabIndex = 29;
+            this.dungeonTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dungeonTextBox1.UseSystemPasswordChar = false;
+            // 
+            // dungeonTextBox4
+            // 
+            this.dungeonTextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.dungeonTextBox4.EdgeColor = System.Drawing.Color.White;
+            this.dungeonTextBox4.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dungeonTextBox4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.dungeonTextBox4.Location = new System.Drawing.Point(176, 70);
+            this.dungeonTextBox4.MaxLength = 32767;
+            this.dungeonTextBox4.Multiline = false;
+            this.dungeonTextBox4.Name = "dungeonTextBox4";
+            this.dungeonTextBox4.ReadOnly = false;
+            this.dungeonTextBox4.Size = new System.Drawing.Size(196, 28);
+            this.dungeonTextBox4.TabIndex = 28;
+            this.dungeonTextBox4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dungeonTextBox4.UseSystemPasswordChar = false;
             // 
             // xuiSuperButton3
             // 
@@ -308,7 +393,7 @@ namespace CarRentalManagement.CarsForm
             this.xuiGradientPanel2.Controls.Add(this.poisonDataGridView1);
             this.xuiGradientPanel2.Controls.Add(this.xuiSuperButton4);
             this.xuiGradientPanel2.Controls.Add(this.kryptonComboBox3);
-            this.xuiGradientPanel2.Location = new System.Drawing.Point(381, 107);
+            this.xuiGradientPanel2.Location = new System.Drawing.Point(381, 93);
             this.xuiGradientPanel2.Name = "xuiGradientPanel2";
             this.xuiGradientPanel2.PrimerColor = System.Drawing.Color.White;
             this.xuiGradientPanel2.Size = new System.Drawing.Size(770, 484);
@@ -316,125 +401,6 @@ namespace CarRentalManagement.CarsForm
             this.xuiGradientPanel2.TabIndex = 12;
             this.xuiGradientPanel2.TopLeft = System.Drawing.Color.DeepPink;
             this.xuiGradientPanel2.TopRight = System.Drawing.Color.DarkSalmon;
-            // 
-            // xuiSuperButton4
-            // 
-            this.xuiSuperButton4.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton4.ButtonImage = null;
-            this.xuiSuperButton4.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.xuiSuperButton4.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.xuiSuperButton4.ButtonText = "Refresh";
-            this.xuiSuperButton4.CornerRadius = 25;
-            this.xuiSuperButton4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSuperButton4.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiSuperButton4.HoverBackgroundColor = System.Drawing.Color.Gray;
-            this.xuiSuperButton4.HoverTextColor = System.Drawing.Color.White;
-            this.xuiSuperButton4.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.xuiSuperButton4.Location = new System.Drawing.Point(426, 36);
-            this.xuiSuperButton4.Name = "xuiSuperButton4";
-            this.xuiSuperButton4.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton4.SelectedTextColor = System.Drawing.Color.Snow;
-            this.xuiSuperButton4.Size = new System.Drawing.Size(121, 40);
-            this.xuiSuperButton4.SuperSelected = false;
-            this.xuiSuperButton4.TabIndex = 25;
-            this.xuiSuperButton4.TextColor = System.Drawing.Color.Red;
-            this.xuiSuperButton4.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // kryptonComboBox3
-            // 
-            this.kryptonComboBox3.DropDownWidth = 186;
-            this.kryptonComboBox3.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
-            this.kryptonComboBox3.Location = new System.Drawing.Point(183, 45);
-            this.kryptonComboBox3.Name = "kryptonComboBox3";
-            this.kryptonComboBox3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.kryptonComboBox3.Size = new System.Drawing.Size(235, 21);
-            this.kryptonComboBox3.TabIndex = 25;
-            this.kryptonComboBox3.Text = "Available or not";
-            // 
-            // dungeonTextBox4
-            // 
-            this.dungeonTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox4.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox4.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox4.Location = new System.Drawing.Point(176, 70);
-            this.dungeonTextBox4.MaxLength = 32767;
-            this.dungeonTextBox4.Multiline = false;
-            this.dungeonTextBox4.Name = "dungeonTextBox4";
-            this.dungeonTextBox4.ReadOnly = false;
-            this.dungeonTextBox4.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox4.TabIndex = 28;
-            this.dungeonTextBox4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox4.UseSystemPasswordChar = false;
-            // 
-            // dungeonTextBox1
-            // 
-            this.dungeonTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox1.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox1.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox1.Location = new System.Drawing.Point(176, 124);
-            this.dungeonTextBox1.MaxLength = 32767;
-            this.dungeonTextBox1.Multiline = false;
-            this.dungeonTextBox1.Name = "dungeonTextBox1";
-            this.dungeonTextBox1.ReadOnly = false;
-            this.dungeonTextBox1.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox1.TabIndex = 29;
-            this.dungeonTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox1.UseSystemPasswordChar = false;
-            // 
-            // dungeonTextBox2
-            // 
-            this.dungeonTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox2.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox2.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox2.Location = new System.Drawing.Point(175, 278);
-            this.dungeonTextBox2.MaxLength = 32767;
-            this.dungeonTextBox2.Multiline = false;
-            this.dungeonTextBox2.Name = "dungeonTextBox2";
-            this.dungeonTextBox2.ReadOnly = false;
-            this.dungeonTextBox2.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox2.TabIndex = 30;
-            this.dungeonTextBox2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox2.UseSystemPasswordChar = false;
-            // 
-            // dungeonTextBox3
-            // 
-            this.dungeonTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox3.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox3.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox3.Location = new System.Drawing.Point(175, 231);
-            this.dungeonTextBox3.MaxLength = 32767;
-            this.dungeonTextBox3.Multiline = false;
-            this.dungeonTextBox3.Name = "dungeonTextBox3";
-            this.dungeonTextBox3.ReadOnly = false;
-            this.dungeonTextBox3.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox3.TabIndex = 32;
-            this.dungeonTextBox3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox3.UseSystemPasswordChar = false;
-            // 
-            // dungeonTextBox5
-            // 
-            this.dungeonTextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox5.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox5.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox5.Location = new System.Drawing.Point(175, 179);
-            this.dungeonTextBox5.MaxLength = 32767;
-            this.dungeonTextBox5.Multiline = false;
-            this.dungeonTextBox5.Name = "dungeonTextBox5";
-            this.dungeonTextBox5.ReadOnly = false;
-            this.dungeonTextBox5.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox5.TabIndex = 31;
-            this.dungeonTextBox5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox5.UseSystemPasswordChar = false;
             // 
             // poisonDataGridView1
             // 
@@ -446,14 +412,14 @@ namespace CarRentalManagement.CarsForm
             this.poisonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.poisonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.poisonDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.poisonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.poisonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -463,28 +429,28 @@ namespace CarRentalManagement.CarsForm
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.poisonDataGridView1.EnableHeadersVisualStyles = false;
             this.poisonDataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.poisonDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.poisonDataGridView1.Location = new System.Drawing.Point(15, 103);
             this.poisonDataGridView1.Name = "poisonDataGridView1";
             this.poisonDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.poisonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.poisonDataGridView1.Size = new System.Drawing.Size(742, 249);
@@ -525,11 +491,45 @@ namespace CarRentalManagement.CarsForm
             this.Column7.HeaderText = "Transmission";
             this.Column7.Name = "Column7";
             // 
+            // xuiSuperButton4
+            // 
+            this.xuiSuperButton4.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.xuiSuperButton4.ButtonImage = null;
+            this.xuiSuperButton4.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.xuiSuperButton4.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.xuiSuperButton4.ButtonText = "Refresh";
+            this.xuiSuperButton4.CornerRadius = 25;
+            this.xuiSuperButton4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiSuperButton4.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiSuperButton4.HoverBackgroundColor = System.Drawing.Color.Gray;
+            this.xuiSuperButton4.HoverTextColor = System.Drawing.Color.White;
+            this.xuiSuperButton4.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.xuiSuperButton4.Location = new System.Drawing.Point(426, 36);
+            this.xuiSuperButton4.Name = "xuiSuperButton4";
+            this.xuiSuperButton4.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.xuiSuperButton4.SelectedTextColor = System.Drawing.Color.Snow;
+            this.xuiSuperButton4.Size = new System.Drawing.Size(121, 40);
+            this.xuiSuperButton4.SuperSelected = false;
+            this.xuiSuperButton4.TabIndex = 25;
+            this.xuiSuperButton4.TextColor = System.Drawing.Color.Red;
+            this.xuiSuperButton4.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // kryptonComboBox3
+            // 
+            this.kryptonComboBox3.DropDownWidth = 186;
+            this.kryptonComboBox3.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.kryptonComboBox3.Location = new System.Drawing.Point(183, 45);
+            this.kryptonComboBox3.Name = "kryptonComboBox3";
+            this.kryptonComboBox3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.kryptonComboBox3.Size = new System.Drawing.Size(235, 21);
+            this.kryptonComboBox3.TabIndex = 25;
+            this.kryptonComboBox3.Text = "Available or not";
+            // 
             // Car
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1149, 586);
+            this.ClientSize = new System.Drawing.Size(1149, 575);
             this.ControlBox = false;
             this.Controls.Add(this.xuiGradientPanel2);
             this.Controls.Add(this.xuiGradientPanel1);
@@ -544,8 +544,8 @@ namespace CarRentalManagement.CarsForm
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             this.xuiGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

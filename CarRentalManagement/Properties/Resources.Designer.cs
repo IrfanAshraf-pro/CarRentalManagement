@@ -153,9 +153,29 @@ namespace CarRentalManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customer_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("customer-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("download-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit2_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("exit2-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +256,16 @@ namespace CarRentalManagement.Properties {
         internal static System.Drawing.Bitmap return_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("return-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap suv_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("suv-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,20 +29,27 @@ namespace CarRentalManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
+            this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelMainShowForms = new System.Windows.Forms.Panel();
+            this.xuiGradientPanel2 = new XanderUI.XUIGradientPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picGame = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new XanderUI.XUISuperButton();
+            this.xuiJoyStick1 = new XanderUI.XUIJoyStick();
             this.btnReturn = new XanderUI.XUISuperButton();
             this.btnRental = new XanderUI.XUISuperButton();
             this.btnCustomer = new XanderUI.XUISuperButton();
             this.btnAddCar = new XanderUI.XUISuperButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelMainShowForms = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.xuiSlidingPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.xuiGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +59,9 @@ namespace CarRentalManagement
             this.xuiSlidingPanel1.BottomRight = System.Drawing.Color.DodgerBlue;
             this.xuiSlidingPanel1.CollapseControl = null;
             this.xuiSlidingPanel1.Collapsed = true;
+            this.xuiSlidingPanel1.Controls.Add(this.picGame);
             this.xuiSlidingPanel1.Controls.Add(this.btnDashboard);
+            this.xuiSlidingPanel1.Controls.Add(this.xuiJoyStick1);
             this.xuiSlidingPanel1.Controls.Add(this.btnReturn);
             this.xuiSlidingPanel1.Controls.Add(this.btnRental);
             this.xuiSlidingPanel1.Controls.Add(this.btnCustomer);
@@ -70,6 +79,81 @@ namespace CarRentalManagement
             this.xuiSlidingPanel1.TabIndex = 3;
             this.xuiSlidingPanel1.TopLeft = System.Drawing.Color.BlueViolet;
             this.xuiSlidingPanel1.TopRight = System.Drawing.Color.DodgerBlue;
+            // 
+            // xuiGradientPanel1
+            // 
+            this.xuiGradientPanel1.BottomLeft = System.Drawing.Color.DodgerBlue;
+            this.xuiGradientPanel1.BottomRight = System.Drawing.Color.Indigo;
+            this.xuiGradientPanel1.Controls.Add(this.pictureBox3);
+            this.xuiGradientPanel1.Controls.Add(this.label1);
+            this.xuiGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.xuiGradientPanel1.Location = new System.Drawing.Point(230, 0);
+            this.xuiGradientPanel1.Name = "xuiGradientPanel1";
+            this.xuiGradientPanel1.PrimerColor = System.Drawing.Color.White;
+            this.xuiGradientPanel1.Size = new System.Drawing.Size(889, 124);
+            this.xuiGradientPanel1.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
+            this.xuiGradientPanel1.TabIndex = 4;
+            this.xuiGradientPanel1.TopLeft = System.Drawing.Color.DodgerBlue;
+            this.xuiGradientPanel1.TopRight = System.Drawing.Color.BlueViolet;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 30F);
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(12, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(744, 52);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Car Rental Management System";
+            // 
+            // panelMainShowForms
+            // 
+            this.panelMainShowForms.BackColor = System.Drawing.Color.Snow;
+            this.panelMainShowForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainShowForms.Location = new System.Drawing.Point(230, 124);
+            this.panelMainShowForms.Margin = new System.Windows.Forms.Padding(0);
+            this.panelMainShowForms.Name = "panelMainShowForms";
+            this.panelMainShowForms.Size = new System.Drawing.Size(889, 586);
+            this.panelMainShowForms.TabIndex = 5;
+            // 
+            // xuiGradientPanel2
+            // 
+            this.xuiGradientPanel2.BottomLeft = System.Drawing.Color.DodgerBlue;
+            this.xuiGradientPanel2.BottomRight = System.Drawing.Color.Fuchsia;
+            this.xuiGradientPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.xuiGradientPanel2.Location = new System.Drawing.Point(230, 630);
+            this.xuiGradientPanel2.Name = "xuiGradientPanel2";
+            this.xuiGradientPanel2.PrimerColor = System.Drawing.Color.White;
+            this.xuiGradientPanel2.Size = new System.Drawing.Size(889, 80);
+            this.xuiGradientPanel2.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
+            this.xuiGradientPanel2.TabIndex = 6;
+            this.xuiGradientPanel2.TopLeft = System.Drawing.Color.DodgerBlue;
+            this.xuiGradientPanel2.TopRight = System.Drawing.Color.DarkViolet;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::CarRentalManagement.Properties.Resources.exit2_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(816, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 52);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // picGame
+            // 
+            this.picGame.BackColor = System.Drawing.Color.Transparent;
+            this.picGame.Image = global::CarRentalManagement.Properties.Resources.suv_removebg_preview;
+            this.picGame.Location = new System.Drawing.Point(12, 490);
+            this.picGame.Name = "picGame";
+            this.picGame.Size = new System.Drawing.Size(100, 50);
+            this.picGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGame.TabIndex = 1;
+            this.picGame.TabStop = false;
             // 
             // btnDashboard
             // 
@@ -93,6 +177,21 @@ namespace CarRentalManagement
             this.btnDashboard.TabIndex = 9;
             this.btnDashboard.TextColor = System.Drawing.Color.White;
             this.btnDashboard.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
+            // 
+            // xuiJoyStick1
+            // 
+            this.xuiJoyStick1.BackColor = System.Drawing.Color.White;
+            this.xuiJoyStick1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xuiJoyStick1.BackgroundImage")));
+            this.xuiJoyStick1.JoyStickColor = System.Drawing.Color.Crimson;
+            this.xuiJoyStick1.KeepOnScreen = true;
+            this.xuiJoyStick1.Location = new System.Drawing.Point(42, 576);
+            this.xuiJoyStick1.MovableObject = this.picGame;
+            this.xuiJoyStick1.Name = "xuiJoyStick1";
+            this.xuiJoyStick1.Sensitivity = 3;
+            this.xuiJoyStick1.Size = new System.Drawing.Size(122, 122);
+            this.xuiJoyStick1.TabIndex = 0;
+            this.xuiJoyStick1.Text = "Control";
             // 
             // btnReturn
             // 
@@ -116,6 +215,7 @@ namespace CarRentalManagement
             this.btnReturn.TabIndex = 7;
             this.btnReturn.TextColor = System.Drawing.Color.White;
             this.btnReturn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnRental
             // 
@@ -139,6 +239,7 @@ namespace CarRentalManagement
             this.btnRental.TabIndex = 6;
             this.btnRental.TextColor = System.Drawing.Color.White;
             this.btnRental.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnRental.Click += new System.EventHandler(this.btnRental_Click_1);
             // 
             // btnCustomer
             // 
@@ -199,43 +300,6 @@ namespace CarRentalManagement
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // xuiGradientPanel1
-            // 
-            this.xuiGradientPanel1.BottomLeft = System.Drawing.Color.DodgerBlue;
-            this.xuiGradientPanel1.BottomRight = System.Drawing.Color.Indigo;
-            this.xuiGradientPanel1.Controls.Add(this.label1);
-            this.xuiGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.xuiGradientPanel1.Location = new System.Drawing.Point(230, 0);
-            this.xuiGradientPanel1.Name = "xuiGradientPanel1";
-            this.xuiGradientPanel1.PrimerColor = System.Drawing.Color.White;
-            this.xuiGradientPanel1.Size = new System.Drawing.Size(889, 124);
-            this.xuiGradientPanel1.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
-            this.xuiGradientPanel1.TabIndex = 4;
-            this.xuiGradientPanel1.TopLeft = System.Drawing.Color.DodgerBlue;
-            this.xuiGradientPanel1.TopRight = System.Drawing.Color.BlueViolet;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 30F);
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(12, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(744, 52);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Car Rental Management System";
-            // 
-            // panelMainShowForms
-            // 
-            this.panelMainShowForms.BackColor = System.Drawing.Color.Snow;
-            this.panelMainShowForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainShowForms.Location = new System.Drawing.Point(230, 124);
-            this.panelMainShowForms.Margin = new System.Windows.Forms.Padding(0);
-            this.panelMainShowForms.Name = "panelMainShowForms";
-            this.panelMainShowForms.Size = new System.Drawing.Size(889, 586);
-            this.panelMainShowForms.TabIndex = 5;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CarRentalManagement.Properties.Resources.border;
@@ -251,6 +315,7 @@ namespace CarRentalManagement
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 710);
+            this.Controls.Add(this.xuiGradientPanel2);
             this.Controls.Add(this.panelMainShowForms);
             this.Controls.Add(this.xuiGradientPanel1);
             this.Controls.Add(this.xuiSlidingPanel1);
@@ -263,9 +328,11 @@ namespace CarRentalManagement
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.xuiSlidingPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.xuiGradientPanel1.ResumeLayout(false);
             this.xuiGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -283,5 +350,9 @@ namespace CarRentalManagement
         private XanderUI.XUISuperButton btnReturn;
         private XanderUI.XUISuperButton btnDashboard;
         private System.Windows.Forms.Label label1;
+        private XanderUI.XUIJoyStick xuiJoyStick1;
+        private System.Windows.Forms.PictureBox picGame;
+        private XanderUI.XUIGradientPanel xuiGradientPanel2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
