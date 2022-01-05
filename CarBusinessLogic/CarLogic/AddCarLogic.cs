@@ -11,7 +11,7 @@ namespace CarBusinessLogic.CarLogic
     public class AddCarLogic
     {
         #region properties
-       
+
         public String regNo { get; set; }
         public String company { get; set; }
         public String name { get; set; }
@@ -27,7 +27,7 @@ namespace CarBusinessLogic.CarLogic
         public void carLogicAdd()
         {
             cld = new CarDbLogic();
-            querry = @"insert into Car values('"+regNo+"','"+company+"','"+name+"','"+availability+"','"+price+"','"+color+"','"+transmission+"')";
+            querry = @"insert into Car values('" + regNo + "','" + company + "','" + name + "','" + availability + "','" + price + "','" + color + "','" + transmission + "')";
             cld.saveCar(querry);
         }
         public List<AddCarLogic> carLogicRead()
@@ -37,9 +37,29 @@ namespace CarBusinessLogic.CarLogic
             var carList = cld.readCar(querry);
             return convert(carList);
         }
-    
-        #region privTE FUNCTIONS
-        private List<AddCarLogic> convert(List<CarDbLogic> list)
+        public List<AddCarLogic> carLogicRead(String avl)
+        {
+            cld = new CarDbLogic();
+            querry = @"select * from Car where Available='" + avl + "'";
+            var carList = cld.readCar(querry);
+            return convert(carList);
+        }
+
+        public void carLogicUpdate()
+        {
+            cld = new CarDbLogic();
+            querry = @"update Car set Company='" + company + "',Name='" + name + "',Available='" + availability + "',Price='" + price + "',Color='" + color + "',transmission='" + transmission + "' where RegNum='" + regNo + "'";
+            cld.saveCar(querry);
+        }
+        public void carLogicDelete()
+        {
+            cld = new CarDbLogic();
+            querry = @"delete from Car where RegNum='" + regNo + "'";
+            cld.saveCar(querry);
+        }
+
+    #region privTE FUNCTIONS
+    private List<AddCarLogic> convert(List<CarDbLogic> list)
         {
             List<AddCarLogic> aLogic = new List<AddCarLogic>();
             foreach(var i in list)

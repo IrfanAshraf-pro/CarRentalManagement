@@ -30,7 +30,7 @@ namespace CarRentalManagement.CarsForm
             //Company
             patternsList.Add(@"^[a-zA-Z]+$");
             //Name
-            patternsList.Add(@"^[a-zA-Z]+$");
+            patternsList.Add(@"^[a-zA-Z \s]+$");
             //Price
             patternsList.Add(@"^\d+$");
             //Color
@@ -38,7 +38,7 @@ namespace CarRentalManagement.CarsForm
         }
 
         #region private functions
-        private void CheckingTextBoxes()
+        private bool CheckingTextBoxes(String text)
         {
            // SettingLabels();
             try
@@ -59,8 +59,13 @@ namespace CarRentalManagement.CarsForm
                             car.transmission = 1;
                         else if (cmbxAddCarTransmission.SelectedItem.ToString() == "Manual")
                             car.transmission = 0;
-                        car.carLogicAdd();
-                        MessageBox.Show("Success");
+                        if (text == "Add")
+                            car.carLogicAdd();
+                        else if (text == "Update")
+                            car.carLogicUpdate();
+                        else if (text == "Delete")
+                            car.carLogicDelete();
+                        return true;
                     }
                     else
                     {
@@ -95,6 +100,7 @@ namespace CarRentalManagement.CarsForm
 
                 MessageBox.Show(ex.Message);
             }
+            return false;
         }
         #region matchingWithPatterns
         private bool checking()
@@ -158,7 +164,6 @@ namespace CarRentalManagement.CarsForm
            
         }
         #endregion
-
         private void settingComboBoxes()
         {
             cmbxAddCarAvailable.Items.Add("yes");
@@ -172,6 +177,7 @@ namespace CarRentalManagement.CarsForm
             AddCarLogic car = new AddCarLogic();
             var carList = car.carLogicRead();
             String tran = "";
+            dgvAddCar.Rows.Clear();
             foreach (var c in carList)
             {
                 if (c.transmission == 1)
@@ -186,6 +192,30 @@ namespace CarRentalManagement.CarsForm
                 dgvAddCar.Rows.Add(c.regNo, c.company, c.name,  c.price, c.color, c.availability, tran);
             }
         }
+        private void readingCars(String avl)
+        {
+            AddCarLogic car = new AddCarLogic();
+            var carList = car.carLogicRead(avl);
+            String tran = "";
+            dgvAddCar.Rows.Clear();
+            foreach (var c in carList)
+            {
+                if (c.transmission == 1)
+                {
+                    tran = "Manual";
+                }
+                else
+                {
+                    tran = "Auto";
+                }
+
+                dgvAddCar.Rows.Add(c.regNo, c.company, c.name, c.price, c.color, c.availability, tran);
+            }
+        }
+        private void updateCars()
+        {
+
+        }
         #endregion
         private void AddCar_Load(object sender, EventArgs e)
         {
@@ -198,7 +228,10 @@ namespace CarRentalManagement.CarsForm
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
-            CheckingTextBoxes();
+            if (CheckingTextBoxes("Add"))
+                readingCars();
+            
+
         }
 
         private void btnAddCarRefresh_Click(object sender, EventArgs e)
@@ -224,6 +257,23 @@ namespace CarRentalManagement.CarsForm
                     cmbxAddCarTransmission.SelectedItem = "Auto";
 
             }
+        }
+
+        private void cmbxAddCarRefresh_SelectedValueChanged(object sender, EventArgs e)
+        {
+            readingCars(cmbxAddCarRefresh.SelectedItem.ToString());
+        }
+
+        private void btnAddCarUpdate_Click(object sender, EventArgs e)
+        {
+            if (CheckingTextBoxes("Update"))
+                readingCars();
+        }
+
+        private void btnAddCarDelete_Click(object sender, EventArgs e)
+        {
+            if (CheckingTextBoxes("Delete"))
+                readingCars();
         }
     }
 }
