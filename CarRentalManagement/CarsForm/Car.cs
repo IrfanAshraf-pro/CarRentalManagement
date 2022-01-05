@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CarBusinessLogic.CarLogic;
+using CarBusinessLogic;
 using System.Text.RegularExpressions;
 
 namespace CarRentalManagement.CarsForm
 {
     public partial class Car : Form
     {
-        String filepath = "";
+      
         private List<String> patternsList;
       
         public Car()
@@ -24,175 +25,205 @@ namespace CarRentalManagement.CarsForm
         private void patterns()
         {
             patternsList = new List<String>();
-            //Plate No
-            patternsList.Add(@"^[a-zA-Z]{3}-\d{4}$");
+            //Reg No
+            patternsList.Add(@"^[a-zA-Z]{3}(-)\d{4}$");
             //Company
             patternsList.Add(@"^[a-zA-Z]+$");
             //Name
             patternsList.Add(@"^[a-zA-Z]+$");
+            //Price
+            patternsList.Add(@"^\d+$");
             //Color
             patternsList.Add(@"^[a-zA-Z]+$");
-            //Engine No
-            patternsList.Add(@"^[a-zA-Z]+$");
-            //Model
-            patternsList.Add(@"^\d{4}$");
-
         }
-      
 
-  
-
-        private void btnBrowse_Click(object sender, EventArgs e)
+        #region private functions
+        private void CheckingTextBoxes()
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            DialogResult dr = ofd.ShowDialog();
-            if (dr == DialogResult.OK)
+           // SettingLabels();
+            try
             {
-                filepath = ofd.FileName;
-               // picAddCar.Image = Image.FromFile(filepath);
+                if ( txtAddCarRegNo.Text != String.Empty && txtAddCarCompany.Text != String.Empty && txtAddCarName.Text != String.Empty && txtAddCarPrice.Text != String.Empty && txtAddCarColor.Text != String.Empty
+                    && cmbxAddCarAvailable.SelectedItem!=null && cmbxAddCarTransmission.SelectedItem!=null)
+                {
+                    if (!checking())
+                    {
+                        AddCarLogic car = new AddCarLogic();
+                        car.regNo = txtAddCarRegNo.Text;
+                        car.company = txtAddCarCompany.Text;
+                        car.name = txtAddCarName.Text;
+                        car.price = float.Parse(txtAddCarPrice.Text);
+                        car.color = txtAddCarColor.Text;
+                        car.availability = cmbxAddCarAvailable.SelectedItem.ToString();
+                        if (cmbxAddCarTransmission.SelectedItem.ToString() == "Auto")
+                            car.transmission = 1;
+                        else if (cmbxAddCarTransmission.SelectedItem.ToString() == "Manual")
+                            car.transmission = 0;
+                        car.carLogicAdd();
+                        MessageBox.Show("Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("please folow format");
+                    }
+
+                }
+                else
+                { 
+                    String Error = "";
+                 
+                    if (txtAddCarRegNo.Text == String.Empty)
+                        Error += "Please enter plate no\n";
+                    if (txtAddCarCompany.Text == String.Empty)
+                        Error += "Please enter company of car\n";
+                    if (txtAddCarName.Text == String.Empty)
+                        Error += "Please enter name of Car\n";
+                    if (txtAddCarPrice.Text == String.Empty)
+                        Error += "Please enter price for Car\n";
+                    if (txtAddCarColor.Text == String.Empty)
+                        Error += "Please enter color of Car\n";
+                    if (cmbxAddCarAvailable.SelectedItem == null)
+                        Error += "Please select Availability of Car\n";
+                    if (cmbxAddCarTransmission.SelectedItem == null)
+                        Error += "Please select transmission of car\n";
+                    MessageBox.Show(Error);
+                }
+
             }
-            else
-                filepath = "";
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
+        #region matchingWithPatterns
+        private bool checking()
+        {
+            String regNo = "", carName = "", company = "", color = "", availability = "", transmission = "";
+            float price = 0;
+            bool check = false;
+           
 
-        //private void btnAddCar_Click(object sender, EventArgs e)
-        //{
-        //    SettingLabels();
-        //    try
-        //    {
-        //        if (filepath!=String.Empty && txtPlateNo.Text!= String.Empty && txtCarName.Text!= String.Empty && txtCompany.Text!= String.Empty && txtColor.Text!= String.Empty && txtModel.Text != String.Empty
-        //            && txtEngineNo.Text != String.Empty && (rdBtnAuto.Checked || rdBtnManual.Checked ))
-        //        {
-        //            if (!checking())
-        //            {
-        //                AddCarLogic car = new AddCarLogic();
-        //                car.plateNo = txtPlateNo.Text;
-        //                car.name = txtCarName.Text;
-        //                car.company = txtCompany.Text;
-        //                car.color = txtColor.Text;
-        //                car.model = int.Parse(txtModel.Text);
-        //                car.engineNo = txtEngineNo.Text;
-        //                if (rdBtnAuto.Checked)
-        //                    car.transmission = 1;
-        //                else
-        //                    car.transmission = 0;
-        //                car.carLogicAdd();
+            if (Regex.IsMatch(txtAddCarRegNo.Text, patternsList[0]))
+                regNo = txtAddCarRegNo.Text;
+            else
+            {
+               // lblPlateNoError.Text = "Please enter correct plate no";
+                check = true;
+            }
+            if (Regex.IsMatch(txtAddCarCompany.Text, patternsList[1]))
+                company = txtAddCarCompany.Text;
+            else
+            {
+               // lblCompanyError.Text = "Please enter correct company name";
+                check = true;
+            }
+            if (Regex.IsMatch(txtAddCarName.Text, patternsList[2]))
+                carName = txtAddCarName.Text;
+            else
+            {
+                //lblNameError.Text = "Please enter correct car name";
+                check = true;
+            }
+           
+            if (Regex.IsMatch(txtAddCarPrice.Text, patternsList[3]))
+                price = float.Parse(txtAddCarPrice.Text);
+            else
+            {
+               // lblColorError.Text = "Please select correct color of car";
+                check = true;
+            }
+            if (Regex.IsMatch(txtAddCarColor.Text, patternsList[4]))
+                color = txtAddCarColor.Text;
+            else
+            {
+                //lblEngineNoError.Text = "Please enter correct Engine No";
+                check = true;
+            }
+            if (cmbxAddCarAvailable.SelectedItem != null)
+                availability = cmbxAddCarAvailable.SelectedItem.ToString();
+            else
+            {
+                //lblModelError.Text = "Please enter correct model of Car";
+                check = true;
+            }
+            if (cmbxAddCarTransmission.SelectedItem != null)
+                transmission = cmbxAddCarTransmission.SelectedItem.ToString();
+            else
+            {
+                //lblModelError.Text = "Please enter correct model of Car";
+                check = true;
+            }
+            return check;
+           
+        }
+        #endregion
 
-        //            }
+        private void settingComboBoxes()
+        {
+            cmbxAddCarAvailable.Items.Add("yes");
+            cmbxAddCarAvailable.Items.Add("No");
+            cmbxAddCarTransmission.Items.Add("Auto");
+            cmbxAddCarTransmission.Items.Add("Manual");
+            cmbxAddCarRefresh.Items.Add("yes");
+            cmbxAddCarRefresh.Items.Add("no");
+        }
+        private void readingCars() {
+            AddCarLogic car = new AddCarLogic();
+            var carList = car.carLogicRead();
+            String tran = "";
+            foreach (var c in carList)
+            {
+                if (c.transmission == 1)
+                {
+                    tran = "Manual";
+                }
+                else
+                {
+                    tran = "Auto";
+                }
 
-        //        }
-        //        else
-        //        {
-        //            if (filepath == String.Empty)
-        //                lblPicError.Text = "Please select a File to Upload";
-        //            if (txtPlateNo.Text == String.Empty)
-        //                lblPlateNoError.Text = "Please enter plate no";
-        //            if (txtCompany.Text == String.Empty)
-        //                lblCompanyError.Text = "Please enter company of car";
-        //            if (txtCarName.Text == String.Empty)
-        //                lblNameError.Text = "Please enter name of Car";
-        //            if (rdBtnAuto.Checked || rdBtnManual.Checked)
-        //            {}
-        //            else
-        //               lblTransmissionError.Text = "Please select mode of Transmission";
-        //            if (txtColor.Text == String.Empty)
-        //                lblColorError.Text = "Please enter color of Car";
-        //            if (txtEngineNo.Text == String.Empty)
-        //                lblEngineNoError.Text = "Please enter color of Car";
-        //            if (txtModel.Text == String.Empty)
-        //                lblModelError.Text = "Plese enter Model of car";
-                   
-        //        }
-                
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
-        //private bool checking()
-        //{
-        //    String plateNo = "", carName = "", company = "", color = "", model = "", engineNo = "", transmission = "";
-        //    bool check = false;
-        //    #region matchingWithPatterns
-
-        //    if (Regex.IsMatch(txtPlateNo.Text, patternsList[0]))
-        //        plateNo = txtPlateNo.Text;
-        //    else
-        //    {
-        //        lblPlateNoError.Text = "Please enter correct plate no";
-        //        check = true;
-        //    }
-        //    if (Regex.IsMatch(txtCompany.Text, patternsList[1]))
-        //        company = txtCompany.Text;
-        //    else
-        //    {
-        //        lblCompanyError.Text = "Please enter correct company name";
-        //        check = true;
-        //    }
-        //    if (Regex.IsMatch(txtCarName.Text, patternsList[2]))
-        //        carName = txtCarName.Text;
-        //    else
-        //    {
-        //        lblNameError.Text = "Please enter correct car name";
-        //        check = true;
-        //    }
-        //    if (rdBtnAuto.Checked)
-        //        transmission = rdBtnAuto.Text;
-        //    else if (rdBtnManual.Checked)
-        //        transmission = rdBtnManual.Text;
-        //    else
-        //    {
-        //        lblTransmissionError.Text = "Please select mode of Transmission";
-        //        check = true;
-        //    }
-        //    if (Regex.IsMatch(txtColor.Text, patternsList[3]))
-        //        color = txtColor.Text;
-        //    else
-        //    {
-        //        lblColorError.Text = "Please select correct color of car";
-        //        check = true;
-        //    }
-        //    if (Regex.IsMatch(txtEngineNo.Text, patternsList[4]))
-        //        engineNo = txtEngineNo.Text;
-        //    else
-        //    {
-        //        lblEngineNoError.Text = "Please enter correct Engine No";
-        //        check = true;
-        //    }
-        //    if (Regex.IsMatch(txtModel.Text, patternsList[5]))
-        //        model = txtModel.Text;
-        //    else
-        //    {
-        //        lblModelError.Text = "Please enter correct model of Car";
-        //        check = true;
-        //    }
-        //    return check;
-        //    #endregion
-        //}
-        //private void SettingLabels()
-        //{
-        //    lblColorError.Text = "";
-        //    lblCompanyError.Text = "";
-        //    lblEngineNoError.Text = "";
-        //    lblModelError.Text = "";
-        //    lblNameError.Text = "";
-        //    lblPicError.Text = "";
-        //    lblPlateNoError.Text = "";
-        //    lblTransmissionError.Text = "";
-            
-        //}
-
+                dgvAddCar.Rows.Add(c.regNo, c.company, c.name,  c.price, c.color, c.availability, tran);
+            }
+        }
+        #endregion
         private void AddCar_Load(object sender, EventArgs e)
         {
             patterns();
-          //  SettingLabels();
+            settingComboBoxes();
+            readingCars();
+
+            //  SettingLabels();
         }
 
-        private void picAddCar_Click(object sender, EventArgs e)
+        private void btnAddCar_Click(object sender, EventArgs e)
         {
+            CheckingTextBoxes();
+        }
 
+        private void btnAddCarRefresh_Click(object sender, EventArgs e)
+        {
+            readingCars();
+        }
+
+        private void dgvAddCar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach(DataGridViewRow row in dgvAddCar.SelectedRows)
+            {
+                txtAddCarRegNo.Text = row.Cells[0].Value.ToString();
+                txtAddCarCompany.Text= row.Cells[1].Value.ToString();
+                txtAddCarName.Text= row.Cells[2].Value.ToString();
+                txtAddCarPrice.Text = row.Cells[3].Value.ToString();
+
+                txtAddCarColor.Text= row.Cells[4].Value.ToString();
+
+                cmbxAddCarAvailable.SelectedItem= row.Cells[5].Value.ToString();
+                if (row.Cells[6].Value.ToString() == "1")
+                    cmbxAddCarTransmission.SelectedItem = "Manual";
+                else
+                    cmbxAddCarTransmission.SelectedItem = "Auto";
+
+            }
         }
     }
 }

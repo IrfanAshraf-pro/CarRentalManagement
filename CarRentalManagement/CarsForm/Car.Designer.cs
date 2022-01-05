@@ -36,16 +36,16 @@ namespace CarRentalManagement.CarsForm
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
-            this.dungeonTextBox3 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox5 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox4 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.xuiSuperButton3 = new XanderUI.XUISuperButton();
-            this.xuiSuperButton2 = new XanderUI.XUISuperButton();
-            this.xuiSuperButton1 = new XanderUI.XUISuperButton();
-            this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.txtAddCarPrice = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.txtAddCarName = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.txtAddCarColor = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.txtAddCarCompany = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.txtAddCarRegNo = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.btnAddCarDelete = new XanderUI.XUISuperButton();
+            this.btnAddCarUpdate = new XanderUI.XUISuperButton();
+            this.btnAddCar = new XanderUI.XUISuperButton();
+            this.cmbxAddCarAvailable = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cmbxAddCarTransmission = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace CarRentalManagement.CarsForm
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.xuiGradientPanel2 = new XanderUI.XUIGradientPanel();
-            this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.dgvAddCar = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,14 +61,14 @@ namespace CarRentalManagement.CarsForm
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xuiSuperButton4 = new XanderUI.XUISuperButton();
-            this.kryptonComboBox3 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.btnAddCarRefresh = new XanderUI.XUISuperButton();
+            this.cmbxAddCarRefresh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.xuiGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxAddCarAvailable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxAddCarTransmission)).BeginInit();
             this.xuiGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxAddCarRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,16 +111,16 @@ namespace CarRentalManagement.CarsForm
             // 
             this.xuiGradientPanel1.BottomLeft = System.Drawing.Color.SlateGray;
             this.xuiGradientPanel1.BottomRight = System.Drawing.Color.SlateGray;
-            this.xuiGradientPanel1.Controls.Add(this.dungeonTextBox3);
-            this.xuiGradientPanel1.Controls.Add(this.dungeonTextBox5);
-            this.xuiGradientPanel1.Controls.Add(this.dungeonTextBox2);
-            this.xuiGradientPanel1.Controls.Add(this.dungeonTextBox1);
-            this.xuiGradientPanel1.Controls.Add(this.dungeonTextBox4);
-            this.xuiGradientPanel1.Controls.Add(this.xuiSuperButton3);
-            this.xuiGradientPanel1.Controls.Add(this.xuiSuperButton2);
-            this.xuiGradientPanel1.Controls.Add(this.xuiSuperButton1);
-            this.xuiGradientPanel1.Controls.Add(this.kryptonComboBox2);
-            this.xuiGradientPanel1.Controls.Add(this.kryptonComboBox1);
+            this.xuiGradientPanel1.Controls.Add(this.txtAddCarPrice);
+            this.xuiGradientPanel1.Controls.Add(this.txtAddCarName);
+            this.xuiGradientPanel1.Controls.Add(this.txtAddCarColor);
+            this.xuiGradientPanel1.Controls.Add(this.txtAddCarCompany);
+            this.xuiGradientPanel1.Controls.Add(this.txtAddCarRegNo);
+            this.xuiGradientPanel1.Controls.Add(this.btnAddCarDelete);
+            this.xuiGradientPanel1.Controls.Add(this.btnAddCarUpdate);
+            this.xuiGradientPanel1.Controls.Add(this.btnAddCar);
+            this.xuiGradientPanel1.Controls.Add(this.cmbxAddCarAvailable);
+            this.xuiGradientPanel1.Controls.Add(this.cmbxAddCarTransmission);
             this.xuiGradientPanel1.Controls.Add(this.label9);
             this.xuiGradientPanel1.Controls.Add(this.label8);
             this.xuiGradientPanel1.Controls.Add(this.label7);
@@ -138,181 +138,182 @@ namespace CarRentalManagement.CarsForm
             this.xuiGradientPanel1.TopLeft = System.Drawing.Color.DarkTurquoise;
             this.xuiGradientPanel1.TopRight = System.Drawing.Color.DarkTurquoise;
             // 
-            // dungeonTextBox3
+            // txtAddCarPrice
             // 
-            this.dungeonTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox3.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox3.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox3.Location = new System.Drawing.Point(175, 231);
-            this.dungeonTextBox3.MaxLength = 32767;
-            this.dungeonTextBox3.Multiline = false;
-            this.dungeonTextBox3.Name = "dungeonTextBox3";
-            this.dungeonTextBox3.ReadOnly = false;
-            this.dungeonTextBox3.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox3.TabIndex = 32;
-            this.dungeonTextBox3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox3.UseSystemPasswordChar = false;
+            this.txtAddCarPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddCarPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtAddCarPrice.EdgeColor = System.Drawing.Color.White;
+            this.txtAddCarPrice.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtAddCarPrice.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtAddCarPrice.Location = new System.Drawing.Point(175, 229);
+            this.txtAddCarPrice.MaxLength = 32767;
+            this.txtAddCarPrice.Multiline = false;
+            this.txtAddCarPrice.Name = "txtAddCarPrice";
+            this.txtAddCarPrice.ReadOnly = false;
+            this.txtAddCarPrice.Size = new System.Drawing.Size(196, 28);
+            this.txtAddCarPrice.TabIndex = 32;
+            this.txtAddCarPrice.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAddCarPrice.UseSystemPasswordChar = false;
             // 
-            // dungeonTextBox5
+            // txtAddCarName
             // 
-            this.dungeonTextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox5.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox5.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox5.Location = new System.Drawing.Point(175, 179);
-            this.dungeonTextBox5.MaxLength = 32767;
-            this.dungeonTextBox5.Multiline = false;
-            this.dungeonTextBox5.Name = "dungeonTextBox5";
-            this.dungeonTextBox5.ReadOnly = false;
-            this.dungeonTextBox5.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox5.TabIndex = 31;
-            this.dungeonTextBox5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox5.UseSystemPasswordChar = false;
+            this.txtAddCarName.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddCarName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtAddCarName.EdgeColor = System.Drawing.Color.White;
+            this.txtAddCarName.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtAddCarName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtAddCarName.Location = new System.Drawing.Point(175, 179);
+            this.txtAddCarName.MaxLength = 32767;
+            this.txtAddCarName.Multiline = false;
+            this.txtAddCarName.Name = "txtAddCarName";
+            this.txtAddCarName.ReadOnly = false;
+            this.txtAddCarName.Size = new System.Drawing.Size(196, 28);
+            this.txtAddCarName.TabIndex = 31;
+            this.txtAddCarName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAddCarName.UseSystemPasswordChar = false;
             // 
-            // dungeonTextBox2
+            // txtAddCarColor
             // 
-            this.dungeonTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox2.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox2.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox2.Location = new System.Drawing.Point(175, 278);
-            this.dungeonTextBox2.MaxLength = 32767;
-            this.dungeonTextBox2.Multiline = false;
-            this.dungeonTextBox2.Name = "dungeonTextBox2";
-            this.dungeonTextBox2.ReadOnly = false;
-            this.dungeonTextBox2.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox2.TabIndex = 30;
-            this.dungeonTextBox2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox2.UseSystemPasswordChar = false;
+            this.txtAddCarColor.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddCarColor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtAddCarColor.EdgeColor = System.Drawing.Color.White;
+            this.txtAddCarColor.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtAddCarColor.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtAddCarColor.Location = new System.Drawing.Point(175, 278);
+            this.txtAddCarColor.MaxLength = 32767;
+            this.txtAddCarColor.Multiline = false;
+            this.txtAddCarColor.Name = "txtAddCarColor";
+            this.txtAddCarColor.ReadOnly = false;
+            this.txtAddCarColor.Size = new System.Drawing.Size(196, 28);
+            this.txtAddCarColor.TabIndex = 30;
+            this.txtAddCarColor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAddCarColor.UseSystemPasswordChar = false;
             // 
-            // dungeonTextBox1
+            // txtAddCarCompany
             // 
-            this.dungeonTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox1.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox1.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox1.Location = new System.Drawing.Point(176, 124);
-            this.dungeonTextBox1.MaxLength = 32767;
-            this.dungeonTextBox1.Multiline = false;
-            this.dungeonTextBox1.Name = "dungeonTextBox1";
-            this.dungeonTextBox1.ReadOnly = false;
-            this.dungeonTextBox1.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox1.TabIndex = 29;
-            this.dungeonTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox1.UseSystemPasswordChar = false;
+            this.txtAddCarCompany.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddCarCompany.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtAddCarCompany.EdgeColor = System.Drawing.Color.White;
+            this.txtAddCarCompany.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtAddCarCompany.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtAddCarCompany.Location = new System.Drawing.Point(176, 124);
+            this.txtAddCarCompany.MaxLength = 32767;
+            this.txtAddCarCompany.Multiline = false;
+            this.txtAddCarCompany.Name = "txtAddCarCompany";
+            this.txtAddCarCompany.ReadOnly = false;
+            this.txtAddCarCompany.Size = new System.Drawing.Size(196, 28);
+            this.txtAddCarCompany.TabIndex = 29;
+            this.txtAddCarCompany.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAddCarCompany.UseSystemPasswordChar = false;
             // 
-            // dungeonTextBox4
+            // txtAddCarRegNo
             // 
-            this.dungeonTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox4.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox4.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox4.Location = new System.Drawing.Point(176, 70);
-            this.dungeonTextBox4.MaxLength = 32767;
-            this.dungeonTextBox4.Multiline = false;
-            this.dungeonTextBox4.Name = "dungeonTextBox4";
-            this.dungeonTextBox4.ReadOnly = false;
-            this.dungeonTextBox4.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox4.TabIndex = 28;
-            this.dungeonTextBox4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox4.UseSystemPasswordChar = false;
+            this.txtAddCarRegNo.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddCarRegNo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtAddCarRegNo.EdgeColor = System.Drawing.Color.White;
+            this.txtAddCarRegNo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtAddCarRegNo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtAddCarRegNo.Location = new System.Drawing.Point(176, 70);
+            this.txtAddCarRegNo.MaxLength = 32767;
+            this.txtAddCarRegNo.Multiline = false;
+            this.txtAddCarRegNo.Name = "txtAddCarRegNo";
+            this.txtAddCarRegNo.ReadOnly = false;
+            this.txtAddCarRegNo.Size = new System.Drawing.Size(196, 28);
+            this.txtAddCarRegNo.TabIndex = 28;
+            this.txtAddCarRegNo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAddCarRegNo.UseSystemPasswordChar = false;
             // 
-            // xuiSuperButton3
+            // btnAddCarDelete
             // 
-            this.xuiSuperButton3.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton3.ButtonImage = null;
-            this.xuiSuperButton3.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.xuiSuperButton3.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.xuiSuperButton3.ButtonText = "Delete";
-            this.xuiSuperButton3.CornerRadius = 25;
-            this.xuiSuperButton3.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSuperButton3.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiSuperButton3.HoverBackgroundColor = System.Drawing.Color.Gray;
-            this.xuiSuperButton3.HoverTextColor = System.Drawing.Color.White;
-            this.xuiSuperButton3.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.xuiSuperButton3.Location = new System.Drawing.Point(275, 421);
-            this.xuiSuperButton3.Name = "xuiSuperButton3";
-            this.xuiSuperButton3.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton3.SelectedTextColor = System.Drawing.Color.Snow;
-            this.xuiSuperButton3.Size = new System.Drawing.Size(100, 40);
-            this.xuiSuperButton3.SuperSelected = false;
-            this.xuiSuperButton3.TabIndex = 24;
-            this.xuiSuperButton3.TextColor = System.Drawing.Color.Red;
-            this.xuiSuperButton3.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCarDelete.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCarDelete.ButtonImage = null;
+            this.btnAddCarDelete.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnAddCarDelete.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnAddCarDelete.ButtonText = "Delete";
+            this.btnAddCarDelete.CornerRadius = 25;
+            this.btnAddCarDelete.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCarDelete.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCarDelete.HoverBackgroundColor = System.Drawing.Color.Gray;
+            this.btnAddCarDelete.HoverTextColor = System.Drawing.Color.White;
+            this.btnAddCarDelete.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnAddCarDelete.Location = new System.Drawing.Point(275, 421);
+            this.btnAddCarDelete.Name = "btnAddCarDelete";
+            this.btnAddCarDelete.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCarDelete.SelectedTextColor = System.Drawing.Color.Snow;
+            this.btnAddCarDelete.Size = new System.Drawing.Size(100, 40);
+            this.btnAddCarDelete.SuperSelected = false;
+            this.btnAddCarDelete.TabIndex = 24;
+            this.btnAddCarDelete.TextColor = System.Drawing.Color.Red;
+            this.btnAddCarDelete.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // xuiSuperButton2
+            // btnAddCarUpdate
             // 
-            this.xuiSuperButton2.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton2.ButtonImage = null;
-            this.xuiSuperButton2.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.xuiSuperButton2.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.xuiSuperButton2.ButtonText = "Update";
-            this.xuiSuperButton2.CornerRadius = 25;
-            this.xuiSuperButton2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSuperButton2.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiSuperButton2.HoverBackgroundColor = System.Drawing.Color.Gray;
-            this.xuiSuperButton2.HoverTextColor = System.Drawing.Color.White;
-            this.xuiSuperButton2.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.xuiSuperButton2.Location = new System.Drawing.Point(151, 421);
-            this.xuiSuperButton2.Name = "xuiSuperButton2";
-            this.xuiSuperButton2.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton2.SelectedTextColor = System.Drawing.Color.Snow;
-            this.xuiSuperButton2.Size = new System.Drawing.Size(100, 40);
-            this.xuiSuperButton2.SuperSelected = false;
-            this.xuiSuperButton2.TabIndex = 23;
-            this.xuiSuperButton2.TextColor = System.Drawing.Color.Red;
-            this.xuiSuperButton2.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCarUpdate.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCarUpdate.ButtonImage = null;
+            this.btnAddCarUpdate.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnAddCarUpdate.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnAddCarUpdate.ButtonText = "Update";
+            this.btnAddCarUpdate.CornerRadius = 25;
+            this.btnAddCarUpdate.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCarUpdate.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCarUpdate.HoverBackgroundColor = System.Drawing.Color.Gray;
+            this.btnAddCarUpdate.HoverTextColor = System.Drawing.Color.White;
+            this.btnAddCarUpdate.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnAddCarUpdate.Location = new System.Drawing.Point(151, 421);
+            this.btnAddCarUpdate.Name = "btnAddCarUpdate";
+            this.btnAddCarUpdate.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCarUpdate.SelectedTextColor = System.Drawing.Color.Snow;
+            this.btnAddCarUpdate.Size = new System.Drawing.Size(100, 40);
+            this.btnAddCarUpdate.SuperSelected = false;
+            this.btnAddCarUpdate.TabIndex = 23;
+            this.btnAddCarUpdate.TextColor = System.Drawing.Color.Red;
+            this.btnAddCarUpdate.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // xuiSuperButton1
+            // btnAddCar
             // 
-            this.xuiSuperButton1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton1.ButtonImage = null;
-            this.xuiSuperButton1.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.xuiSuperButton1.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.xuiSuperButton1.ButtonText = "Add";
-            this.xuiSuperButton1.CornerRadius = 25;
-            this.xuiSuperButton1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSuperButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiSuperButton1.HoverBackgroundColor = System.Drawing.Color.Gray;
-            this.xuiSuperButton1.HoverTextColor = System.Drawing.Color.White;
-            this.xuiSuperButton1.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.xuiSuperButton1.Location = new System.Drawing.Point(26, 421);
-            this.xuiSuperButton1.Name = "xuiSuperButton1";
-            this.xuiSuperButton1.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton1.SelectedTextColor = System.Drawing.Color.Snow;
-            this.xuiSuperButton1.Size = new System.Drawing.Size(100, 40);
-            this.xuiSuperButton1.SuperSelected = false;
-            this.xuiSuperButton1.TabIndex = 22;
-            this.xuiSuperButton1.TextColor = System.Drawing.Color.Red;
-            this.xuiSuperButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCar.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCar.ButtonImage = null;
+            this.btnAddCar.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnAddCar.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnAddCar.ButtonText = "Add";
+            this.btnAddCar.CornerRadius = 25;
+            this.btnAddCar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCar.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCar.HoverBackgroundColor = System.Drawing.Color.Gray;
+            this.btnAddCar.HoverTextColor = System.Drawing.Color.White;
+            this.btnAddCar.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnAddCar.Location = new System.Drawing.Point(26, 421);
+            this.btnAddCar.Name = "btnAddCar";
+            this.btnAddCar.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCar.SelectedTextColor = System.Drawing.Color.Snow;
+            this.btnAddCar.Size = new System.Drawing.Size(100, 40);
+            this.btnAddCar.SuperSelected = false;
+            this.btnAddCar.TabIndex = 22;
+            this.btnAddCar.TextColor = System.Drawing.Color.Red;
+            this.btnAddCar.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
             // 
-            // kryptonComboBox2
+            // cmbxAddCarAvailable
             // 
-            this.kryptonComboBox2.DropDownWidth = 186;
-            this.kryptonComboBox2.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
-            this.kryptonComboBox2.Location = new System.Drawing.Point(176, 334);
-            this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.kryptonComboBox2.Size = new System.Drawing.Size(186, 21);
-            this.kryptonComboBox2.TabIndex = 21;
-            this.kryptonComboBox2.Text = "Please select availability";
+            this.cmbxAddCarAvailable.DropDownWidth = 186;
+            this.cmbxAddCarAvailable.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.cmbxAddCarAvailable.Location = new System.Drawing.Point(177, 334);
+            this.cmbxAddCarAvailable.Name = "cmbxAddCarAvailable";
+            this.cmbxAddCarAvailable.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.cmbxAddCarAvailable.Size = new System.Drawing.Size(186, 21);
+            this.cmbxAddCarAvailable.TabIndex = 21;
+            this.cmbxAddCarAvailable.Text = "Please select Availability";
             // 
-            // kryptonComboBox1
+            // cmbxAddCarTransmission
             // 
-            this.kryptonComboBox1.DropDownWidth = 186;
-            this.kryptonComboBox1.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(176, 378);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.kryptonComboBox1.Size = new System.Drawing.Size(186, 21);
-            this.kryptonComboBox1.TabIndex = 13;
-            this.kryptonComboBox1.Text = "Please select transmission";
+            this.cmbxAddCarTransmission.DropDownWidth = 186;
+            this.cmbxAddCarTransmission.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.cmbxAddCarTransmission.Location = new System.Drawing.Point(176, 378);
+            this.cmbxAddCarTransmission.Name = "cmbxAddCarTransmission";
+            this.cmbxAddCarTransmission.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.cmbxAddCarTransmission.Size = new System.Drawing.Size(186, 21);
+            this.cmbxAddCarTransmission.TabIndex = 13;
+            this.cmbxAddCarTransmission.Text = "Please select transmission";
             // 
             // label9
             // 
@@ -370,9 +371,9 @@ namespace CarRentalManagement.CarsForm
             this.label6.ForeColor = System.Drawing.Color.FloralWhite;
             this.label6.Location = new System.Drawing.Point(25, 179);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 23);
+            this.label6.Size = new System.Drawing.Size(55, 23);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Model";
+            this.label6.Text = "Name";
             // 
             // label4
             // 
@@ -390,9 +391,9 @@ namespace CarRentalManagement.CarsForm
             // 
             this.xuiGradientPanel2.BottomLeft = System.Drawing.Color.Gray;
             this.xuiGradientPanel2.BottomRight = System.Drawing.Color.Lavender;
-            this.xuiGradientPanel2.Controls.Add(this.poisonDataGridView1);
-            this.xuiGradientPanel2.Controls.Add(this.xuiSuperButton4);
-            this.xuiGradientPanel2.Controls.Add(this.kryptonComboBox3);
+            this.xuiGradientPanel2.Controls.Add(this.dgvAddCar);
+            this.xuiGradientPanel2.Controls.Add(this.btnAddCarRefresh);
+            this.xuiGradientPanel2.Controls.Add(this.cmbxAddCarRefresh);
             this.xuiGradientPanel2.Location = new System.Drawing.Point(381, 93);
             this.xuiGradientPanel2.Name = "xuiGradientPanel2";
             this.xuiGradientPanel2.PrimerColor = System.Drawing.Color.White;
@@ -402,16 +403,17 @@ namespace CarRentalManagement.CarsForm
             this.xuiGradientPanel2.TopLeft = System.Drawing.Color.DeepPink;
             this.xuiGradientPanel2.TopRight = System.Drawing.Color.DarkSalmon;
             // 
-            // poisonDataGridView1
+            // dgvAddCar
             // 
-            this.poisonDataGridView1.AllowUserToAddRows = false;
-            this.poisonDataGridView1.AllowUserToDeleteRows = false;
-            this.poisonDataGridView1.AllowUserToResizeColumns = false;
-            this.poisonDataGridView1.AllowUserToResizeRows = false;
-            this.poisonDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.poisonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.poisonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.poisonDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAddCar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgvAddCar.AllowUserToAddRows = false;
+            this.dgvAddCar.AllowUserToDeleteRows = false;
+            this.dgvAddCar.AllowUserToResizeColumns = false;
+            this.dgvAddCar.AllowUserToResizeRows = false;
+            this.dgvAddCar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvAddCar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAddCar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvAddCar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -419,9 +421,9 @@ namespace CarRentalManagement.CarsForm
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.poisonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.poisonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAddCar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAddCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -436,13 +438,14 @@ namespace CarRentalManagement.CarsForm
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.poisonDataGridView1.EnableHeadersVisualStyles = false;
-            this.poisonDataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.poisonDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.poisonDataGridView1.Location = new System.Drawing.Point(15, 103);
-            this.poisonDataGridView1.Name = "poisonDataGridView1";
-            this.poisonDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAddCar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAddCar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvAddCar.EnableHeadersVisualStyles = false;
+            this.dgvAddCar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvAddCar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvAddCar.Location = new System.Drawing.Point(15, 103);
+            this.dgvAddCar.Name = "dgvAddCar";
+            this.dgvAddCar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -450,11 +453,12 @@ namespace CarRentalManagement.CarsForm
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.poisonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.poisonDataGridView1.Size = new System.Drawing.Size(742, 249);
-            this.poisonDataGridView1.TabIndex = 26;
+            this.dgvAddCar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAddCar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvAddCar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAddCar.Size = new System.Drawing.Size(742, 249);
+            this.dgvAddCar.TabIndex = 26;
+            this.dgvAddCar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddCar_CellDoubleClick);
             // 
             // Column1
             // 
@@ -468,7 +472,7 @@ namespace CarRentalManagement.CarsForm
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Model";
+            this.Column3.HeaderText = "Name";
             this.Column3.Name = "Column3";
             // 
             // Column4
@@ -491,39 +495,40 @@ namespace CarRentalManagement.CarsForm
             this.Column7.HeaderText = "Transmission";
             this.Column7.Name = "Column7";
             // 
-            // xuiSuperButton4
+            // btnAddCarRefresh
             // 
-            this.xuiSuperButton4.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton4.ButtonImage = null;
-            this.xuiSuperButton4.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.xuiSuperButton4.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.xuiSuperButton4.ButtonText = "Refresh";
-            this.xuiSuperButton4.CornerRadius = 25;
-            this.xuiSuperButton4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSuperButton4.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiSuperButton4.HoverBackgroundColor = System.Drawing.Color.Gray;
-            this.xuiSuperButton4.HoverTextColor = System.Drawing.Color.White;
-            this.xuiSuperButton4.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.xuiSuperButton4.Location = new System.Drawing.Point(426, 36);
-            this.xuiSuperButton4.Name = "xuiSuperButton4";
-            this.xuiSuperButton4.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton4.SelectedTextColor = System.Drawing.Color.Snow;
-            this.xuiSuperButton4.Size = new System.Drawing.Size(121, 40);
-            this.xuiSuperButton4.SuperSelected = false;
-            this.xuiSuperButton4.TabIndex = 25;
-            this.xuiSuperButton4.TextColor = System.Drawing.Color.Red;
-            this.xuiSuperButton4.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCarRefresh.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCarRefresh.ButtonImage = null;
+            this.btnAddCarRefresh.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnAddCarRefresh.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnAddCarRefresh.ButtonText = "Refresh";
+            this.btnAddCarRefresh.CornerRadius = 25;
+            this.btnAddCarRefresh.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCarRefresh.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCarRefresh.HoverBackgroundColor = System.Drawing.Color.Gray;
+            this.btnAddCarRefresh.HoverTextColor = System.Drawing.Color.White;
+            this.btnAddCarRefresh.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnAddCarRefresh.Location = new System.Drawing.Point(426, 36);
+            this.btnAddCarRefresh.Name = "btnAddCarRefresh";
+            this.btnAddCarRefresh.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAddCarRefresh.SelectedTextColor = System.Drawing.Color.Snow;
+            this.btnAddCarRefresh.Size = new System.Drawing.Size(121, 40);
+            this.btnAddCarRefresh.SuperSelected = false;
+            this.btnAddCarRefresh.TabIndex = 25;
+            this.btnAddCarRefresh.TextColor = System.Drawing.Color.Red;
+            this.btnAddCarRefresh.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddCarRefresh.Click += new System.EventHandler(this.btnAddCarRefresh_Click);
             // 
-            // kryptonComboBox3
+            // cmbxAddCarRefresh
             // 
-            this.kryptonComboBox3.DropDownWidth = 186;
-            this.kryptonComboBox3.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
-            this.kryptonComboBox3.Location = new System.Drawing.Point(183, 45);
-            this.kryptonComboBox3.Name = "kryptonComboBox3";
-            this.kryptonComboBox3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.kryptonComboBox3.Size = new System.Drawing.Size(235, 21);
-            this.kryptonComboBox3.TabIndex = 25;
-            this.kryptonComboBox3.Text = "Available or not";
+            this.cmbxAddCarRefresh.DropDownWidth = 186;
+            this.cmbxAddCarRefresh.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.cmbxAddCarRefresh.Location = new System.Drawing.Point(183, 45);
+            this.cmbxAddCarRefresh.Name = "cmbxAddCarRefresh";
+            this.cmbxAddCarRefresh.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.cmbxAddCarRefresh.Size = new System.Drawing.Size(235, 21);
+            this.cmbxAddCarRefresh.TabIndex = 25;
+            this.cmbxAddCarRefresh.Text = "Available or not";
             // 
             // Car
             // 
@@ -541,11 +546,11 @@ namespace CarRentalManagement.CarsForm
             this.Load += new System.EventHandler(this.AddCar_Load);
             this.xuiGradientPanel1.ResumeLayout(false);
             this.xuiGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxAddCarAvailable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxAddCarTransmission)).EndInit();
             this.xuiGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxAddCarRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,26 +561,26 @@ namespace CarRentalManagement.CarsForm
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private XanderUI.XUIGradientPanel xuiGradientPanel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbxAddCarAvailable;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbxAddCarTransmission;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private XanderUI.XUISuperButton xuiSuperButton1;
-        private XanderUI.XUISuperButton xuiSuperButton3;
-        private XanderUI.XUISuperButton xuiSuperButton2;
+        private XanderUI.XUISuperButton btnAddCar;
+        private XanderUI.XUISuperButton btnAddCarDelete;
+        private XanderUI.XUISuperButton btnAddCarUpdate;
         private XanderUI.XUIGradientPanel xuiGradientPanel2;
-        private XanderUI.XUISuperButton xuiSuperButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox3;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox3;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox5;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox2;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox4;
-        private ReaLTaiizor.Controls.PoisonDataGridView poisonDataGridView1;
+        private XanderUI.XUISuperButton btnAddCarRefresh;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbxAddCarRefresh;
+        private ReaLTaiizor.Controls.DungeonTextBox txtAddCarPrice;
+        private ReaLTaiizor.Controls.DungeonTextBox txtAddCarName;
+        private ReaLTaiizor.Controls.DungeonTextBox txtAddCarColor;
+        private ReaLTaiizor.Controls.DungeonTextBox txtAddCarCompany;
+        private ReaLTaiizor.Controls.DungeonTextBox txtAddCarRegNo;
+        private ReaLTaiizor.Controls.PoisonDataGridView dgvAddCar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
