@@ -45,9 +45,10 @@
   <ItemGroup>
     <Compile Include="Admin\LoginLogic.cs" />
     <Compile Include="CarLogic\AddCarLogic.cs" />
-    <Compile Include="CarLogic\ReadCarLogic.cs" />
+    <Compile Include="Customer\CustomerBl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rent\RentClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

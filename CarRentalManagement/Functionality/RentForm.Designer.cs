@@ -29,26 +29,26 @@ namespace CarRentalManagement.Functionality
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
-            this.poisonDateTime2 = new ReaLTaiizor.Controls.PoisonDateTime();
-            this.poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
+            this.dtRenturnDate = new ReaLTaiizor.Controls.PoisonDateTime();
+            this.dtRentDate = new ReaLTaiizor.Controls.PoisonDateTime();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.skyComboBox2 = new ReaLTaiizor.Controls.SkyComboBox();
-            this.skyComboBox1 = new ReaLTaiizor.Controls.SkyComboBox();
-            this.dungeonTextBox4 = new ReaLTaiizor.Controls.DungeonTextBox();
-            this.dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.cmbxRentCustomerId = new ReaLTaiizor.Controls.SkyComboBox();
+            this.cmbxRentCarRegNo = new ReaLTaiizor.Controls.SkyComboBox();
+            this.txtRentCustomerName = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.txtRentId = new ReaLTaiizor.Controls.DungeonTextBox();
             this.xuiSuperButton2 = new XanderUI.XUISuperButton();
-            this.xuiSuperButton1 = new XanderUI.XUISuperButton();
+            this.btnRentAdd = new XanderUI.XUISuperButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.xuiGradientPanel2 = new XanderUI.XUIGradientPanel();
-            this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.dgvRentedCars = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,23 +59,23 @@ namespace CarRentalManagement.Functionality
             this.label5 = new System.Windows.Forms.Label();
             this.xuiGradientPanel1.SuspendLayout();
             this.xuiGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRentedCars)).BeginInit();
             this.SuspendLayout();
             // 
             // xuiGradientPanel1
             // 
             this.xuiGradientPanel1.BottomLeft = System.Drawing.Color.SlateGray;
             this.xuiGradientPanel1.BottomRight = System.Drawing.Color.SlateGray;
-            this.xuiGradientPanel1.Controls.Add(this.poisonDateTime2);
-            this.xuiGradientPanel1.Controls.Add(this.poisonDateTime1);
+            this.xuiGradientPanel1.Controls.Add(this.dtRenturnDate);
+            this.xuiGradientPanel1.Controls.Add(this.dtRentDate);
             this.xuiGradientPanel1.Controls.Add(this.label2);
             this.xuiGradientPanel1.Controls.Add(this.label1);
-            this.xuiGradientPanel1.Controls.Add(this.skyComboBox2);
-            this.xuiGradientPanel1.Controls.Add(this.skyComboBox1);
-            this.xuiGradientPanel1.Controls.Add(this.dungeonTextBox4);
-            this.xuiGradientPanel1.Controls.Add(this.dungeonTextBox1);
+            this.xuiGradientPanel1.Controls.Add(this.cmbxRentCustomerId);
+            this.xuiGradientPanel1.Controls.Add(this.cmbxRentCarRegNo);
+            this.xuiGradientPanel1.Controls.Add(this.txtRentCustomerName);
+            this.xuiGradientPanel1.Controls.Add(this.txtRentId);
             this.xuiGradientPanel1.Controls.Add(this.xuiSuperButton2);
-            this.xuiGradientPanel1.Controls.Add(this.xuiSuperButton1);
+            this.xuiGradientPanel1.Controls.Add(this.btnRentAdd);
             this.xuiGradientPanel1.Controls.Add(this.label7);
             this.xuiGradientPanel1.Controls.Add(this.label6);
             this.xuiGradientPanel1.Controls.Add(this.label4);
@@ -89,21 +89,21 @@ namespace CarRentalManagement.Functionality
             this.xuiGradientPanel1.TopLeft = System.Drawing.Color.DarkTurquoise;
             this.xuiGradientPanel1.TopRight = System.Drawing.Color.DarkTurquoise;
             // 
-            // poisonDateTime2
+            // dtRenturnDate
             // 
-            this.poisonDateTime2.Location = new System.Drawing.Point(192, 304);
-            this.poisonDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
-            this.poisonDateTime2.Name = "poisonDateTime2";
-            this.poisonDateTime2.Size = new System.Drawing.Size(196, 29);
-            this.poisonDateTime2.TabIndex = 31;
+            this.dtRenturnDate.Location = new System.Drawing.Point(192, 304);
+            this.dtRenturnDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtRenturnDate.Name = "dtRenturnDate";
+            this.dtRenturnDate.Size = new System.Drawing.Size(196, 29);
+            this.dtRenturnDate.TabIndex = 31;
             // 
-            // poisonDateTime1
+            // dtRentDate
             // 
-            this.poisonDateTime1.Location = new System.Drawing.Point(192, 248);
-            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.poisonDateTime1.Name = "poisonDateTime1";
-            this.poisonDateTime1.Size = new System.Drawing.Size(196, 29);
-            this.poisonDateTime1.TabIndex = 1;
+            this.dtRentDate.Location = new System.Drawing.Point(192, 248);
+            this.dtRentDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtRentDate.Name = "dtRentDate";
+            this.dtRentDate.Size = new System.Drawing.Size(196, 29);
+            this.dtRentDate.TabIndex = 1;
             // 
             // label2
             // 
@@ -129,109 +129,110 @@ namespace CarRentalManagement.Functionality
             this.label1.TabIndex = 29;
             this.label1.Text = "Rent Date";
             // 
-            // skyComboBox2
+            // cmbxRentCustomerId
             // 
-            this.skyComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skyComboBox2.BGColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.skyComboBox2.BGColorB = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.skyComboBox2.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.skyComboBox2.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.skyComboBox2.BorderColorC = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.skyComboBox2.BorderColorD = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-            this.skyComboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skyComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.skyComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.skyComboBox2.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyComboBox2.FormattingEnabled = true;
-            this.skyComboBox2.ItemHeight = 16;
-            this.skyComboBox2.ItemHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
-            this.skyComboBox2.LineColorA = System.Drawing.Color.White;
-            this.skyComboBox2.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.skyComboBox2.LineColorC = System.Drawing.Color.White;
-            this.skyComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skyComboBox2.ListBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skyComboBox2.ListDashType = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.skyComboBox2.ListForeColor = System.Drawing.Color.Black;
-            this.skyComboBox2.ListSelectedBackColorA = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skyComboBox2.ListSelectedBackColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skyComboBox2.Location = new System.Drawing.Point(192, 139);
-            this.skyComboBox2.Name = "skyComboBox2";
-            this.skyComboBox2.Size = new System.Drawing.Size(196, 22);
-            this.skyComboBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.skyComboBox2.StartIndex = 0;
-            this.skyComboBox2.TabIndex = 28;
-            this.skyComboBox2.TriangleColorA = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
-            this.skyComboBox2.TriangleColorB = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.cmbxRentCustomerId.BackColor = System.Drawing.Color.Transparent;
+            this.cmbxRentCustomerId.BGColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.cmbxRentCustomerId.BGColorB = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cmbxRentCustomerId.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.cmbxRentCustomerId.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.cmbxRentCustomerId.BorderColorC = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.cmbxRentCustomerId.BorderColorD = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.cmbxRentCustomerId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbxRentCustomerId.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbxRentCustomerId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxRentCustomerId.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.cmbxRentCustomerId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.cmbxRentCustomerId.FormattingEnabled = true;
+            this.cmbxRentCustomerId.ItemHeight = 16;
+            this.cmbxRentCustomerId.ItemHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.cmbxRentCustomerId.LineColorA = System.Drawing.Color.White;
+            this.cmbxRentCustomerId.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.cmbxRentCustomerId.LineColorC = System.Drawing.Color.White;
+            this.cmbxRentCustomerId.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbxRentCustomerId.ListBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cmbxRentCustomerId.ListDashType = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.cmbxRentCustomerId.ListForeColor = System.Drawing.Color.Black;
+            this.cmbxRentCustomerId.ListSelectedBackColorA = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbxRentCustomerId.ListSelectedBackColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbxRentCustomerId.Location = new System.Drawing.Point(192, 139);
+            this.cmbxRentCustomerId.Name = "cmbxRentCustomerId";
+            this.cmbxRentCustomerId.Size = new System.Drawing.Size(196, 22);
+            this.cmbxRentCustomerId.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.cmbxRentCustomerId.StartIndex = 0;
+            this.cmbxRentCustomerId.TabIndex = 28;
+            this.cmbxRentCustomerId.TriangleColorA = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.cmbxRentCustomerId.TriangleColorB = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.cmbxRentCustomerId.SelectedIndexChanged += new System.EventHandler(this.cmbxRentCustomerId_SelectedIndexChanged);
             // 
-            // skyComboBox1
+            // cmbxRentCarRegNo
             // 
-            this.skyComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skyComboBox1.BGColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.skyComboBox1.BGColorB = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.skyComboBox1.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.skyComboBox1.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.skyComboBox1.BorderColorC = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.skyComboBox1.BorderColorD = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-            this.skyComboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skyComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.skyComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.skyComboBox1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyComboBox1.FormattingEnabled = true;
-            this.skyComboBox1.ItemHeight = 16;
-            this.skyComboBox1.ItemHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
-            this.skyComboBox1.LineColorA = System.Drawing.Color.White;
-            this.skyComboBox1.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.skyComboBox1.LineColorC = System.Drawing.Color.White;
-            this.skyComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skyComboBox1.ListBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skyComboBox1.ListDashType = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.skyComboBox1.ListForeColor = System.Drawing.Color.Black;
-            this.skyComboBox1.ListSelectedBackColorA = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skyComboBox1.ListSelectedBackColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skyComboBox1.Location = new System.Drawing.Point(192, 87);
-            this.skyComboBox1.Name = "skyComboBox1";
-            this.skyComboBox1.Size = new System.Drawing.Size(196, 22);
-            this.skyComboBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.skyComboBox1.StartIndex = 0;
-            this.skyComboBox1.TabIndex = 1;
-            this.skyComboBox1.TriangleColorA = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
-            this.skyComboBox1.TriangleColorB = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.cmbxRentCarRegNo.BackColor = System.Drawing.Color.Transparent;
+            this.cmbxRentCarRegNo.BGColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.cmbxRentCarRegNo.BGColorB = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cmbxRentCarRegNo.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.cmbxRentCarRegNo.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.cmbxRentCarRegNo.BorderColorC = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.cmbxRentCarRegNo.BorderColorD = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.cmbxRentCarRegNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbxRentCarRegNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbxRentCarRegNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxRentCarRegNo.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.cmbxRentCarRegNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.cmbxRentCarRegNo.FormattingEnabled = true;
+            this.cmbxRentCarRegNo.ItemHeight = 16;
+            this.cmbxRentCarRegNo.ItemHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.cmbxRentCarRegNo.LineColorA = System.Drawing.Color.White;
+            this.cmbxRentCarRegNo.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.cmbxRentCarRegNo.LineColorC = System.Drawing.Color.White;
+            this.cmbxRentCarRegNo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbxRentCarRegNo.ListBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cmbxRentCarRegNo.ListDashType = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.cmbxRentCarRegNo.ListForeColor = System.Drawing.Color.Black;
+            this.cmbxRentCarRegNo.ListSelectedBackColorA = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbxRentCarRegNo.ListSelectedBackColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbxRentCarRegNo.Location = new System.Drawing.Point(192, 87);
+            this.cmbxRentCarRegNo.Name = "cmbxRentCarRegNo";
+            this.cmbxRentCarRegNo.Size = new System.Drawing.Size(196, 22);
+            this.cmbxRentCarRegNo.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.cmbxRentCarRegNo.StartIndex = 0;
+            this.cmbxRentCarRegNo.TabIndex = 1;
+            this.cmbxRentCarRegNo.TriangleColorA = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.cmbxRentCarRegNo.TriangleColorB = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
             // 
-            // dungeonTextBox4
+            // txtRentCustomerName
             // 
-            this.dungeonTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox4.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox4.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox4.Location = new System.Drawing.Point(192, 196);
-            this.dungeonTextBox4.MaxLength = 32767;
-            this.dungeonTextBox4.Multiline = false;
-            this.dungeonTextBox4.Name = "dungeonTextBox4";
-            this.dungeonTextBox4.ReadOnly = false;
-            this.dungeonTextBox4.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox4.TabIndex = 27;
-            this.dungeonTextBox4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox4.UseSystemPasswordChar = false;
+            this.txtRentCustomerName.BackColor = System.Drawing.Color.Transparent;
+            this.txtRentCustomerName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtRentCustomerName.EdgeColor = System.Drawing.Color.White;
+            this.txtRentCustomerName.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtRentCustomerName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtRentCustomerName.Location = new System.Drawing.Point(192, 196);
+            this.txtRentCustomerName.MaxLength = 32767;
+            this.txtRentCustomerName.Multiline = false;
+            this.txtRentCustomerName.Name = "txtRentCustomerName";
+            this.txtRentCustomerName.ReadOnly = false;
+            this.txtRentCustomerName.Size = new System.Drawing.Size(196, 28);
+            this.txtRentCustomerName.TabIndex = 27;
+            this.txtRentCustomerName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRentCustomerName.UseSystemPasswordChar = false;
             // 
-            // dungeonTextBox1
+            // txtRentId
             // 
-            this.dungeonTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.dungeonTextBox1.EdgeColor = System.Drawing.Color.White;
-            this.dungeonTextBox1.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dungeonTextBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.dungeonTextBox1.Location = new System.Drawing.Point(192, 33);
-            this.dungeonTextBox1.MaxLength = 32767;
-            this.dungeonTextBox1.Multiline = false;
-            this.dungeonTextBox1.Name = "dungeonTextBox1";
-            this.dungeonTextBox1.ReadOnly = false;
-            this.dungeonTextBox1.Size = new System.Drawing.Size(196, 28);
-            this.dungeonTextBox1.TabIndex = 3;
-            this.dungeonTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dungeonTextBox1.UseSystemPasswordChar = false;
+            this.txtRentId.BackColor = System.Drawing.Color.Transparent;
+            this.txtRentId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtRentId.EdgeColor = System.Drawing.Color.White;
+            this.txtRentId.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtRentId.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtRentId.Location = new System.Drawing.Point(192, 33);
+            this.txtRentId.MaxLength = 32767;
+            this.txtRentId.Multiline = false;
+            this.txtRentId.Name = "txtRentId";
+            this.txtRentId.ReadOnly = false;
+            this.txtRentId.Size = new System.Drawing.Size(196, 28);
+            this.txtRentId.TabIndex = 3;
+            this.txtRentId.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRentId.UseSystemPasswordChar = false;
             // 
             // xuiSuperButton2
             // 
@@ -255,29 +256,31 @@ namespace CarRentalManagement.Functionality
             this.xuiSuperButton2.TabIndex = 23;
             this.xuiSuperButton2.TextColor = System.Drawing.Color.Red;
             this.xuiSuperButton2.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiSuperButton2.Click += new System.EventHandler(this.xuiSuperButton2_Click);
             // 
-            // xuiSuperButton1
+            // btnRentAdd
             // 
-            this.xuiSuperButton1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton1.ButtonImage = null;
-            this.xuiSuperButton1.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.xuiSuperButton1.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.xuiSuperButton1.ButtonText = "Add";
-            this.xuiSuperButton1.CornerRadius = 25;
-            this.xuiSuperButton1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSuperButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiSuperButton1.HoverBackgroundColor = System.Drawing.Color.Gray;
-            this.xuiSuperButton1.HoverTextColor = System.Drawing.Color.White;
-            this.xuiSuperButton1.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.xuiSuperButton1.Location = new System.Drawing.Point(77, 400);
-            this.xuiSuperButton1.Name = "xuiSuperButton1";
-            this.xuiSuperButton1.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.xuiSuperButton1.SelectedTextColor = System.Drawing.Color.Snow;
-            this.xuiSuperButton1.Size = new System.Drawing.Size(100, 40);
-            this.xuiSuperButton1.SuperSelected = false;
-            this.xuiSuperButton1.TabIndex = 22;
-            this.xuiSuperButton1.TextColor = System.Drawing.Color.Red;
-            this.xuiSuperButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnRentAdd.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnRentAdd.ButtonImage = null;
+            this.btnRentAdd.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnRentAdd.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnRentAdd.ButtonText = "Add";
+            this.btnRentAdd.CornerRadius = 25;
+            this.btnRentAdd.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRentAdd.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnRentAdd.HoverBackgroundColor = System.Drawing.Color.Gray;
+            this.btnRentAdd.HoverTextColor = System.Drawing.Color.White;
+            this.btnRentAdd.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnRentAdd.Location = new System.Drawing.Point(77, 400);
+            this.btnRentAdd.Name = "btnRentAdd";
+            this.btnRentAdd.SelectedBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnRentAdd.SelectedTextColor = System.Drawing.Color.Snow;
+            this.btnRentAdd.Size = new System.Drawing.Size(100, 40);
+            this.btnRentAdd.SuperSelected = false;
+            this.btnRentAdd.TabIndex = 22;
+            this.btnRentAdd.TextColor = System.Drawing.Color.Red;
+            this.btnRentAdd.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnRentAdd.Click += new System.EventHandler(this.btnRentAdd_Click);
             // 
             // label7
             // 
@@ -329,9 +332,12 @@ namespace CarRentalManagement.Functionality
             // 
             // xuiGradientPanel2
             // 
+            this.xuiGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.xuiGradientPanel2.BottomLeft = System.Drawing.Color.Gray;
             this.xuiGradientPanel2.BottomRight = System.Drawing.Color.Lavender;
-            this.xuiGradientPanel2.Controls.Add(this.poisonDataGridView1);
+            this.xuiGradientPanel2.Controls.Add(this.dgvRentedCars);
             this.xuiGradientPanel2.Location = new System.Drawing.Point(409, 102);
             this.xuiGradientPanel2.Name = "xuiGradientPanel2";
             this.xuiGradientPanel2.PrimerColor = System.Drawing.Color.White;
@@ -342,26 +348,30 @@ namespace CarRentalManagement.Functionality
             this.xuiGradientPanel2.TopRight = System.Drawing.Color.DarkSalmon;
             this.xuiGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.xuiGradientPanel2_Paint);
             // 
-            // poisonDataGridView1
+            // dgvRentedCars
             // 
-            this.poisonDataGridView1.AllowUserToAddRows = false;
-            this.poisonDataGridView1.AllowUserToDeleteRows = false;
-            this.poisonDataGridView1.AllowUserToResizeColumns = false;
-            this.poisonDataGridView1.AllowUserToResizeRows = false;
-            this.poisonDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.poisonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.poisonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.poisonDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.poisonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.poisonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRentedCars.AllowUserToAddRows = false;
+            this.dgvRentedCars.AllowUserToDeleteRows = false;
+            this.dgvRentedCars.AllowUserToResizeColumns = false;
+            this.dgvRentedCars.AllowUserToResizeRows = false;
+            this.dgvRentedCars.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRentedCars.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvRentedCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRentedCars.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvRentedCars.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRentedCars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvRentedCars.ColumnHeadersHeight = 18;
+            this.dgvRentedCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvRentedCars.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -369,32 +379,35 @@ namespace CarRentalManagement.Functionality
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.poisonDataGridView1.EnableHeadersVisualStyles = false;
-            this.poisonDataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.poisonDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.poisonDataGridView1.Location = new System.Drawing.Point(7, 60);
-            this.poisonDataGridView1.Name = "poisonDataGridView1";
-            this.poisonDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.poisonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.poisonDataGridView1.Size = new System.Drawing.Size(741, 150);
-            this.poisonDataGridView1.TabIndex = 0;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRentedCars.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvRentedCars.EnableHeadersVisualStyles = false;
+            this.dgvRentedCars.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvRentedCars.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvRentedCars.Location = new System.Drawing.Point(7, 60);
+            this.dgvRentedCars.Name = "dgvRentedCars";
+            this.dgvRentedCars.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRentedCars.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvRentedCars.RowHeadersWidth = 35;
+            this.dgvRentedCars.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvRentedCars.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvRentedCars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRentedCars.Size = new System.Drawing.Size(461, 150);
+            this.dgvRentedCars.TabIndex = 0;
+            this.dgvRentedCars.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRentedCars_CellContentDoubleClick);
             // 
             // Column1
             // 
@@ -447,7 +460,7 @@ namespace CarRentalManagement.Functionality
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 586);
+            this.ClientSize = new System.Drawing.Size(889, 586);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.xuiGradientPanel2);
             this.Controls.Add(this.xuiGradientPanel1);
@@ -455,10 +468,11 @@ namespace CarRentalManagement.Functionality
             this.Name = "RentForm";
             this.Text = "RentForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.RentForm_Load);
             this.xuiGradientPanel1.ResumeLayout(false);
             this.xuiGradientPanel1.PerformLayout();
             this.xuiGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRentedCars)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,22 +481,22 @@ namespace CarRentalManagement.Functionality
         #endregion
 
         private XanderUI.XUIGradientPanel xuiGradientPanel1;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox4;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
+        private ReaLTaiizor.Controls.DungeonTextBox txtRentCustomerName;
+        private ReaLTaiizor.Controls.DungeonTextBox txtRentId;
         private XanderUI.XUISuperButton xuiSuperButton2;
-        private XanderUI.XUISuperButton xuiSuperButton1;
+        private XanderUI.XUISuperButton btnRentAdd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private XanderUI.XUIGradientPanel xuiGradientPanel2;
-        private ReaLTaiizor.Controls.PoisonDataGridView poisonDataGridView1;
-        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime2;
-        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
+        private ReaLTaiizor.Controls.PoisonDataGridView dgvRentedCars;
+        private ReaLTaiizor.Controls.PoisonDateTime dtRenturnDate;
+        private ReaLTaiizor.Controls.PoisonDateTime dtRentDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private ReaLTaiizor.Controls.SkyComboBox skyComboBox2;
-        private ReaLTaiizor.Controls.SkyComboBox skyComboBox1;
+        private ReaLTaiizor.Controls.SkyComboBox cmbxRentCustomerId;
+        private ReaLTaiizor.Controls.SkyComboBox cmbxRentCarRegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

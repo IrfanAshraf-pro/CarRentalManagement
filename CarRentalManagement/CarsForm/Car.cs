@@ -212,10 +212,7 @@ namespace CarRentalManagement.CarsForm
                 dgvAddCar.Rows.Add(c.regNo, c.company, c.name, c.price, c.color, c.availability, tran);
             }
         }
-        private void updateCars()
-        {
-
-        }
+      
         #endregion
         private void AddCar_Load(object sender, EventArgs e)
         {
@@ -274,6 +271,11 @@ namespace CarRentalManagement.CarsForm
         {
             if (CheckingTextBoxes("Delete"))
                 readingCars();
+        }
+
+        private void xuiGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
