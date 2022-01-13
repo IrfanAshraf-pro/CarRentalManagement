@@ -23,6 +23,9 @@ namespace CarBusinessLogic.Rent
             rdl = new RentDbLogic();
             querry = @"insert into CarRental values('" + rentId + "','" + regNo + "','" + custId + "','" + rentDate + "','" + returnDate + "','" + rentFee + "')";
             rdl.SaveRentedCar(querry);
+            querry = @"update Car set Available='No' where RegNum='"+regNo+"'";
+            rdl.SaveRentedCar(querry);
+
         }
         public void RentCarLogicupdate()
         {
@@ -33,7 +36,7 @@ namespace CarBusinessLogic.Rent
         public List<RentClass> readingRentedCar()
         {
             rdl = new RentDbLogic();
-            querry = @"select cr.RentId,ca.RegNum,c.CustomerId,c.CustomerName,cr.RentDate,cr.ReturnDate,cr.fee from Customers c left join CarRental cr on c.CustomerId=cr.CustomerId right join Car ca on cr.RegNum=ca.RegNum ";
+            querry = @"select cr.RentId,ca.RegNum,c.CustomerId,c.CustomerName,cr.RentDate,cr.ReturnDate,cr.fee from Customers c left join CarRental cr on c.CustomerId=cr.CustomerId right join Car ca on cr.RegNum=ca.RegNum where cr.RentId is not null";
             var rentedList = rdl.readRentedCar(querry);
             return convert(rentedList);
         }

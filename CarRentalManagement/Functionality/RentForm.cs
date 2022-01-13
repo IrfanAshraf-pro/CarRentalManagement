@@ -119,8 +119,11 @@ namespace CarRentalManagement.Functionality
             var carList = car.carLogicRead();
             foreach (var c in carList)
             {
-                cmbxRentCarRegNo.Items.Add(c.regNo);
-                fee.Add(c.regNo, c.price);
+                if (c.availability != "No")
+                {
+                    cmbxRentCarRegNo.Items.Add(c.regNo);
+                    fee.Add(c.regNo, c.price);
+                }
             }
         }
         private void readingCustomers()
@@ -146,7 +149,7 @@ namespace CarRentalManagement.Functionality
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+"hello");
             }
         }
 
