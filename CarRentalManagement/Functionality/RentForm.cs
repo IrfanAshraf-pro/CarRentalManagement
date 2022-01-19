@@ -144,7 +144,9 @@ namespace CarRentalManagement.Functionality
                 dgvRentedCars.Rows.Clear();
                 foreach (var item in rentedCarsList)
                 {
-                    dgvRentedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, item.rentDate, item.returnDate, item.rentFee);
+                    if (item.returned == 0) {
+                        dgvRentedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, item.rentDate, item.returnDate, item.rentFee);
+                    }
                 }
             }
             catch (Exception ex)

@@ -16,12 +16,13 @@ namespace CarBusinessLogic.Rent
         public String rentDate { get; set; }
         public String returnDate { get; set; }
         public float rentFee { get; set; }
+        public int returned { get; set; }
         RentDbLogic rdl;
         String querry;
         public void RentCarLogicAdd()
         {
             rdl = new RentDbLogic();
-            querry = @"insert into CarRental values('" + rentId + "','" + regNo + "','" + custId + "','" + rentDate + "','" + returnDate + "','" + rentFee + "')";
+            querry = @"insert into CarRental values('" + rentId + "','" + regNo + "','" + custId + "','" + rentDate + "','" + returnDate + "','" + rentFee + "','"+0+"')";
             rdl.SaveRentedCar(querry);
             querry = @"update Car set Available='No' where RegNum='"+regNo+"'";
             rdl.SaveRentedCar(querry);
@@ -36,7 +37,7 @@ namespace CarBusinessLogic.Rent
         public List<RentClass> readingRentedCar()
         {
             rdl = new RentDbLogic();
-            querry = @"select cr.RentId,ca.RegNum,c.CustomerId,c.CustomerName,cr.RentDate,cr.ReturnDate,cr.fee from Customers c left join CarRental cr on c.CustomerId=cr.CustomerId right join Car ca on cr.RegNum=ca.RegNum where cr.RentId is not null";
+            querry = @"select cr.RentId,ca.RegNum,c.CustomerId,c.CustomerName,cr.RentDate,cr.ReturnDate,cr.fee,cr.returned from Customers c left join CarRental cr on c.CustomerId=cr.CustomerId right join Car ca on cr.RegNum=ca.RegNum where cr.RentId is not null";
             var rentedList = rdl.readRentedCar(querry);
             return convert(rentedList);
         }
@@ -55,6 +56,7 @@ namespace CarBusinessLogic.Rent
                 rentCar.rentDate = i.rentDate;
                 rentCar.returnDate = i.returnDate;
                 rentCar.rentFee = i.rentFee;
+                rentCar.returned = i.returned;
                 rentedCars.Add(rentCar);
             }
             return rentedCars;

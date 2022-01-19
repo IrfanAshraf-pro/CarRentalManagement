@@ -76,5 +76,15 @@ namespace CarRentalManagement
         {
             Application.Exit();
         }
+
+        private void btnMaintenance_Click(object sender, EventArgs e)
+        {
+            openChild(new Functionality.Maintenance());
+        }
+
+        private void btnFinance_Click(object sender, EventArgs e)
+        {
+            openChild(new Functionality.Finance());
+        }
     }
 }

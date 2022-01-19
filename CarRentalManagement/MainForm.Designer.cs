@@ -31,9 +31,10 @@ namespace CarRentalManagement
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
-            this.picGame = new System.Windows.Forms.PictureBox();
+            this.btnMaintenance = new XanderUI.XUISuperButton();
             this.btnDashboard = new XanderUI.XUISuperButton();
             this.xuiJoyStick1 = new XanderUI.XUIJoyStick();
+            this.picGame = new System.Windows.Forms.PictureBox();
             this.btnReturn = new XanderUI.XUISuperButton();
             this.btnRental = new XanderUI.XUISuperButton();
             this.btnCustomer = new XanderUI.XUISuperButton();
@@ -45,11 +46,13 @@ namespace CarRentalManagement
             this.panelMainShowForms = new System.Windows.Forms.Panel();
             this.xuiGradientPanel2 = new XanderUI.XUIGradientPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnFinance = new XanderUI.XUISuperButton();
             this.xuiSlidingPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.xuiGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.xuiGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +62,8 @@ namespace CarRentalManagement
             this.xuiSlidingPanel1.BottomRight = System.Drawing.Color.DodgerBlue;
             this.xuiSlidingPanel1.CollapseControl = null;
             this.xuiSlidingPanel1.Collapsed = true;
-            this.xuiSlidingPanel1.Controls.Add(this.picGame);
+            this.xuiSlidingPanel1.Controls.Add(this.btnFinance);
+            this.xuiSlidingPanel1.Controls.Add(this.btnMaintenance);
             this.xuiSlidingPanel1.Controls.Add(this.btnDashboard);
             this.xuiSlidingPanel1.Controls.Add(this.xuiJoyStick1);
             this.xuiSlidingPanel1.Controls.Add(this.btnReturn);
@@ -80,16 +84,29 @@ namespace CarRentalManagement
             this.xuiSlidingPanel1.TopLeft = System.Drawing.Color.BlueViolet;
             this.xuiSlidingPanel1.TopRight = System.Drawing.Color.DodgerBlue;
             // 
-            // picGame
+            // btnMaintenance
             // 
-            this.picGame.BackColor = System.Drawing.Color.Transparent;
-            this.picGame.Image = global::CarRentalManagement.Properties.Resources.suv_removebg_preview;
-            this.picGame.Location = new System.Drawing.Point(12, 490);
-            this.picGame.Name = "picGame";
-            this.picGame.Size = new System.Drawing.Size(100, 50);
-            this.picGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGame.TabIndex = 1;
-            this.picGame.TabStop = false;
+            this.btnMaintenance.BackgroundColor = System.Drawing.Color.LightSlateGray;
+            this.btnMaintenance.ButtonImage = global::CarRentalManagement.Properties.Resources.available_removebg_preview;
+            this.btnMaintenance.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnMaintenance.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnMaintenance.ButtonText = "Maintenance";
+            this.btnMaintenance.CornerRadius = 24;
+            this.btnMaintenance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaintenance.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnMaintenance.HoverBackgroundColor = System.Drawing.Color.DarkBlue;
+            this.btnMaintenance.HoverTextColor = System.Drawing.Color.White;
+            this.btnMaintenance.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnMaintenance.Location = new System.Drawing.Point(11, 413);
+            this.btnMaintenance.Name = "btnMaintenance";
+            this.btnMaintenance.SelectedBackColor = System.Drawing.Color.BlueViolet;
+            this.btnMaintenance.SelectedTextColor = System.Drawing.Color.White;
+            this.btnMaintenance.Size = new System.Drawing.Size(205, 40);
+            this.btnMaintenance.SuperSelected = false;
+            this.btnMaintenance.TabIndex = 10;
+            this.btnMaintenance.TextColor = System.Drawing.Color.White;
+            this.btnMaintenance.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
             // 
             // btnDashboard
             // 
@@ -104,7 +121,7 @@ namespace CarRentalManagement
             this.btnDashboard.HoverBackgroundColor = System.Drawing.Color.DarkBlue;
             this.btnDashboard.HoverTextColor = System.Drawing.Color.White;
             this.btnDashboard.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnDashboard.Location = new System.Drawing.Point(9, 424);
+            this.btnDashboard.Location = new System.Drawing.Point(9, 522);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.SelectedBackColor = System.Drawing.Color.BlueViolet;
             this.btnDashboard.SelectedTextColor = System.Drawing.Color.White;
@@ -128,6 +145,17 @@ namespace CarRentalManagement
             this.xuiJoyStick1.Size = new System.Drawing.Size(122, 122);
             this.xuiJoyStick1.TabIndex = 0;
             this.xuiJoyStick1.Text = "Control";
+            // 
+            // picGame
+            // 
+            this.picGame.BackColor = System.Drawing.Color.Transparent;
+            this.picGame.Image = global::CarRentalManagement.Properties.Resources.suv_removebg_preview;
+            this.picGame.Location = new System.Drawing.Point(68, 18);
+            this.picGame.Name = "picGame";
+            this.picGame.Size = new System.Drawing.Size(100, 50);
+            this.picGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGame.TabIndex = 1;
+            this.picGame.TabStop = false;
             // 
             // btnReturn
             // 
@@ -292,6 +320,7 @@ namespace CarRentalManagement
             // 
             this.xuiGradientPanel2.BottomLeft = System.Drawing.Color.DodgerBlue;
             this.xuiGradientPanel2.BottomRight = System.Drawing.Color.Fuchsia;
+            this.xuiGradientPanel2.Controls.Add(this.picGame);
             this.xuiGradientPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.xuiGradientPanel2.Location = new System.Drawing.Point(230, 630);
             this.xuiGradientPanel2.Name = "xuiGradientPanel2";
@@ -311,6 +340,30 @@ namespace CarRentalManagement
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnFinance
+            // 
+            this.btnFinance.BackgroundColor = System.Drawing.Color.LightSlateGray;
+            this.btnFinance.ButtonImage = global::CarRentalManagement.Properties.Resources.available_removebg_preview;
+            this.btnFinance.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnFinance.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnFinance.ButtonText = "Finance";
+            this.btnFinance.CornerRadius = 24;
+            this.btnFinance.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinance.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnFinance.HoverBackgroundColor = System.Drawing.Color.DarkBlue;
+            this.btnFinance.HoverTextColor = System.Drawing.Color.White;
+            this.btnFinance.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnFinance.Location = new System.Drawing.Point(11, 467);
+            this.btnFinance.Name = "btnFinance";
+            this.btnFinance.SelectedBackColor = System.Drawing.Color.BlueViolet;
+            this.btnFinance.SelectedTextColor = System.Drawing.Color.White;
+            this.btnFinance.Size = new System.Drawing.Size(205, 40);
+            this.btnFinance.SuperSelected = false;
+            this.btnFinance.TabIndex = 11;
+            this.btnFinance.TextColor = System.Drawing.Color.White;
+            this.btnFinance.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnFinance.Click += new System.EventHandler(this.btnFinance_Click);
             // 
             // MainForm
             // 
@@ -335,6 +388,7 @@ namespace CarRentalManagement
             this.xuiGradientPanel1.ResumeLayout(false);
             this.xuiGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.xuiGradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -357,5 +411,7 @@ namespace CarRentalManagement
         private System.Windows.Forms.PictureBox picGame;
         private XanderUI.XUIGradientPanel xuiGradientPanel2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private XanderUI.XUISuperButton btnMaintenance;
+        private XanderUI.XUISuperButton btnFinance;
     }
 }

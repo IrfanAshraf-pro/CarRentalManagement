@@ -17,6 +17,7 @@ namespace DataAcessLayer
         public String rentDate { get; set; }
         public String returnDate { get; set; }
         public float rentFee { get; set; }
+        public int returned { get; set; }
 
         public void SaveRentedCar(String querry)
         {
@@ -46,6 +47,7 @@ namespace DataAcessLayer
                 c.rentDate = sdr["RentDate"].ToString();
                 c.returnDate = sdr["ReturnDate"].ToString();
                 c.rentFee = float.Parse(sdr["fee"].ToString());
+                c.returned = int.Parse(sdr["returned"].ToString());
                 rentedCarList.Add(c);
             }
             sdr.Close();

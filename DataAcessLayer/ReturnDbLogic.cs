@@ -16,6 +16,7 @@ namespace DataAcessLayer
         public String returnedDate { get; set; }
         public String returnId { get; set; }
         public float fine { get; set; }
+        public int returned { get; set; }
         public void ReturnCar(String querry)
         {
 
@@ -43,6 +44,7 @@ namespace DataAcessLayer
                 c.custName = sdr["CustomerName"].ToString();
                 c.returnId = sdr["ReturnId"].ToString();
                 c.fine = float.Parse(sdr["Fine"].ToString());
+                c.returned = int.Parse(sdr["returned"].ToString());
                 returnedCars.Add(c);
             }
             sdr.Close();

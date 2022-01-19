@@ -47,8 +47,10 @@
     <Compile Include="CarDbLogic.cs" />
     <Compile Include="CustomerDbLogic.cs" />
     <Compile Include="Db.cs" />
+    <Compile Include="MaintenanceDbLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="readingFinance.cs" />
     <Compile Include="RentDbLogic.cs" />
     <Compile Include="ReturnDbLogic.cs" />
   </ItemGroup>

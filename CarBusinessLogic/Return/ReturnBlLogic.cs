@@ -16,7 +16,7 @@ namespace CarBusinessLogic.Return
         public String returnedDate { get; set; }
         public String returnId { get; set; }
         public float fine { get; set; }
-
+        public int returned { get; set; }
         private ReturnDbLogic rdl;
         private String querry;
         public void returnCar()
@@ -26,11 +26,13 @@ namespace CarBusinessLogic.Return
             rdl.ReturnCar(querry);
             querry = @"update Car set Available='Yes' where RegNum='"+regNo+"'";
             rdl.ReturnCar(querry);
+            querry = @"update CarRental set returned=1 where RegNum='" + regNo + "'";
+            rdl.ReturnCar(querry);
         }
         public List<ReturnBlLogic> readingReturnedCars()
         {
             rdl = new ReturnDbLogic();
-            querry = @"select crs.RentId,crs.RegNum,crs.CustomerId,c.CustomerName,cr.ReturnId,cr.Fine from Customers c 
+            querry = @"select crs.RentId,crs.RegNum,crs.CustomerId,c.CustomerName,cr.ReturnId,cr.Fine,crs.returned from Customers c 
 left join ReturnCars cr on c.CustomerId=cr.CustomerId inner join Car ca on cr.RegNum=ca.RegNum
 right join CarRental crs on c.CustomerId=crs.CustomerId and cr.RegNum=crs.RegNum where cr.ReturnId is not Null";
             var rentedList = rdl.readRentedCar(querry);
@@ -51,6 +53,7 @@ right join CarRental crs on c.CustomerId=crs.CustomerId and cr.RegNum=crs.RegNum
                 rentCar.custName = i.custName;
                 rentCar.returnId = i.returnId;
                 rentCar.fine = i.fine;
+                rentCar.returned = i.returned;
                 rentedCars.Add(rentCar);
             }
             return rentedCars;

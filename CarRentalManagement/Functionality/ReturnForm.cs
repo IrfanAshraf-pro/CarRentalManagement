@@ -104,8 +104,8 @@ namespace CarRentalManagement.Functionality
                 dgvReturnedCars.Rows.Clear();
                 foreach (var item in returnedList)
                 {
-                    dgvReturnedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, item.returnId, item.fine);
-                   
+                   if(item.returned==1)
+                        dgvReturnedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, item.returnId, item.fine);
                 }
             }
             catch (Exception ex)
@@ -122,8 +122,11 @@ namespace CarRentalManagement.Functionality
                 dgvRentedCars.Rows.Clear();
                 foreach (var item in rentedCarsList)
                 {
-                    dgvRentedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, item.rentDate, item.returnDate, item.rentFee);
-                    delay.Add(item.rentId, item.returnDate);
+                    if(item.returned==0)
+                    {
+                        dgvRentedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, item.rentDate, item.returnDate, item.rentFee);
+                        delay.Add(item.rentId, item.returnDate);
+                    }
                 }
             }
             catch (Exception ex)
@@ -141,10 +144,7 @@ namespace CarRentalManagement.Functionality
         {
             patterns();
             readingRentedCarsFromDb();
-            readingReturnedCarsFromDb();
-            
-
-
+            readingReturnedCarsFromDb();   
         }
 
         private void dgvRentedCars_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

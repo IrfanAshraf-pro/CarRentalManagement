@@ -92,6 +92,18 @@
     <Compile Include="Functionality\DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functionality\Finance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functionality\Finance.Designer.cs">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functionality\Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functionality\Maintenance.Designer.cs">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functionality\RentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Functionality\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functionality\Finance.resx">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functionality\Maintenance.resx">
+      <DependentUpon>Maintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Functionality\RentForm.resx">
       <DependentUpon>RentForm.cs</DependentUpon>
