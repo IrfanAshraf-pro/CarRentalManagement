@@ -25,9 +25,8 @@ namespace CarBusinessLogic.Finance
 
         public List<FinanceBl> readingCarFinances(String reg)
         {
-            querry = @"select car.Name,renCar.RegNum,renCar.RentId,renCar.RentDate,renCar.ReturnDate,
- renCar.fee,retCar.ReturnDate,retCar.Fine from Car car 
- join CarRental renCar on renCar.RegNum=car.RegNum join ReturnCars retCar on retCar.RegNum=renCar.RegNum where retCar.RegNum='"+reg+"'";
+            querry = @"select c.Name,renCar.RegNum,renCar.RentId,renCar.RentDate,renCar.ReturnDate,renCar.fee,retCar.ReturnDate,retCar.Fine from ReturnCars retCar
+                       join CarRental renCar on  renCar.CustomerId=retCar.CustomerId join Car c on renCar.RegNum=c.RegNum where retCar.RegNum='"+reg+"' and renCar.returned !=0";
             rf = new readingFinance();
             var carData=rf.readCarData(querry);
             return convert(carData);        

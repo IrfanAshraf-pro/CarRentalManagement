@@ -38,7 +38,7 @@ namespace DataAcessLayer
                 c.rentDate = sdr["RentDate"].ToString();
                 c.returnDate = sdr["ReturnDate"].ToString();
                 c.fee = float.Parse(sdr["fee"].ToString());
-                c.returnedDate = sdr["ReturnDate"].ToString();
+                c.returnedDate = sdr[6].ToString();
                 c.fine = float.Parse(sdr["Fine"].ToString());
                 carList.Add(c);
             }

@@ -111,7 +111,7 @@ namespace CarRentalManagement.Functionality
             dgvMaintenanceCrs.Rows.Clear();
             foreach (var item in list)
             {
-                dgvMaintenanceCrs.Rows.Add(item.maintenanceId, item.regNo, item.price, item.date);
+                dgvMaintenanceCrs.Rows.Add(item.maintenanceId, item.regNo, item.price, DateTime.Parse(item.date).ToShortDateString());
 
             }
         }

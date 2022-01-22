@@ -37,7 +37,7 @@ namespace CarRentalManagement.Functionality
                 dgvFinance.Rows.Clear();
                 foreach (var item in readFinance)
                 {
-                    dgvFinance.Rows.Add(item.carName, item.regNum, item.rentId, item.rentDate, item.returnDate, item.fee, item.returnedDate, item.fine);
+                    dgvFinance.Rows.Add(item.carName, item.regNum, item.rentId, DateTime.Parse(item.rentDate).ToShortDateString(), DateTime.Parse(item.returnDate).ToShortDateString(), item.fee, DateTime.Parse(item.returnedDate).ToShortDateString(), item.fine);
                 }
            
         }
@@ -49,7 +49,7 @@ namespace CarRentalManagement.Functionality
                 dgvMaintenanceInFinance.Rows.Clear();
                 foreach (var item in mlist)
                 {
-                    dgvMaintenanceInFinance.Rows.Add(item.regNo, item.date, item.price);
+                    dgvMaintenanceInFinance.Rows.Add(item.regNo, DateTime.Parse(item.date).ToShortDateString(), item.price);
                 }
             
         }

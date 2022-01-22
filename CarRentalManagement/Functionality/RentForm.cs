@@ -145,7 +145,7 @@ namespace CarRentalManagement.Functionality
                 foreach (var item in rentedCarsList)
                 {
                     if (item.returned == 0) {
-                        dgvRentedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, item.rentDate, item.returnDate, item.rentFee);
+                        dgvRentedCars.Rows.Add(item.rentId, item.regNo, item.custId, item.custName, DateTime.Parse(item.rentDate).ToShortDateString(), DateTime.Parse(item.returnDate).ToShortDateString(), item.rentFee);
                     }
                 }
             }
