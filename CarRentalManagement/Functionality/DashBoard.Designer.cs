@@ -30,10 +30,10 @@ namespace CarRentalManagement.Functionality
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCustomerCount = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.xuiButton2 = new XanderUI.XUIButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCarsTotal = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.xuiButton1 = new XanderUI.XUIButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,7 +44,6 @@ namespace CarRentalManagement.Functionality
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CarRentalManagement.Properties.Resources.charger2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -53,17 +52,17 @@ namespace CarRentalManagement.Functionality
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblCustomerCount
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(53, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 31);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "3";
+            this.lblCustomerCount.AutoSize = true;
+            this.lblCustomerCount.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblCustomerCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerCount.ForeColor = System.Drawing.Color.Snow;
+            this.lblCustomerCount.Location = new System.Drawing.Point(43, 171);
+            this.lblCustomerCount.Name = "lblCustomerCount";
+            this.lblCustomerCount.Size = new System.Drawing.Size(29, 31);
+            this.lblCustomerCount.TabIndex = 38;
+            this.lblCustomerCount.Text = "3";
             // 
             // pictureBox2
             // 
@@ -97,17 +96,17 @@ namespace CarRentalManagement.Functionality
             this.xuiButton2.TextColor = System.Drawing.Color.Snow;
             this.xuiButton2.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // label1
+            // lblCarsTotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(222, 408);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 31);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "3";
+            this.lblCarsTotal.AutoSize = true;
+            this.lblCarsTotal.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblCarsTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarsTotal.ForeColor = System.Drawing.Color.Snow;
+            this.lblCarsTotal.Location = new System.Drawing.Point(211, 402);
+            this.lblCarsTotal.Name = "lblCarsTotal";
+            this.lblCarsTotal.Size = new System.Drawing.Size(29, 31);
+            this.lblCarsTotal.TabIndex = 35;
+            this.lblCarsTotal.Text = "3";
             // 
             // pictureBox3
             // 
@@ -158,10 +157,10 @@ namespace CarRentalManagement.Functionality
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1071, 526);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCustomerCount);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.xuiButton2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCarsTotal);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.xuiButton1);
             this.Controls.Add(this.label5);
@@ -170,6 +169,7 @@ namespace CarRentalManagement.Functionality
             this.Name = "DashBoard";
             this.Text = "DashBoard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.DashBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -181,10 +181,10 @@ namespace CarRentalManagement.Functionality
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCustomerCount;
         private System.Windows.Forms.PictureBox pictureBox2;
         private XanderUI.XUIButton xuiButton2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCarsTotal;
         private System.Windows.Forms.PictureBox pictureBox3;
         private XanderUI.XUIButton xuiButton1;
         private System.Windows.Forms.Label label5;

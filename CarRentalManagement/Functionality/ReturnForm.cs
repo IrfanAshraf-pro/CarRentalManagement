@@ -163,6 +163,7 @@ namespace CarRentalManagement.Functionality
             {
                 MessageBox.Show("Succesfully added");
                 readingReturnedCarsFromDb();
+                readingRentedCarsFromDb();
             }
         }
     }

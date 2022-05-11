@@ -15,6 +15,7 @@ namespace CarRentalManagement.Functionality
 {
     public partial class Finance : Form
     {
+        FinanceModel fModel = new FinanceModel();
         public Finance()
         {
             InitializeComponent();
@@ -35,23 +36,53 @@ namespace CarRentalManagement.Functionality
             FinanceBl fl = new FinanceBl();
                 var readFinance = fl.readingCarFinances(cmbxFinanceCarSearch.SelectedItem.ToString());
                 dgvFinance.Rows.Clear();
-                foreach (var item in readFinance)
+            List<float> price = new List<float>();
+            List<float> fine = new List<float>();
+
+            foreach (var item in readFinance)
                 {
-                    dgvFinance.Rows.Add(item.carName, item.regNum, item.rentId, DateTime.Parse(item.rentDate).ToShortDateString(), DateTime.Parse(item.returnDate).ToShortDateString(), item.fee, DateTime.Parse(item.returnedDate).ToShortDateString(), item.fine);
+                price.Add(item.fee);
+                fine.Add(item.fine);
+                dgvFinance.Rows.Add(item.carName, item.regNum, item.rentId, DateTime.Parse(item.rentDate).ToShortDateString(), DateTime.Parse(item.returnDate).ToShortDateString(), item.fee, DateTime.Parse(item.returnedDate).ToShortDateString(), item.fine);
                 }
-           
+            fModel.price = price;
+            fModel.fine = fine;
+            readingMaintenance();
+
         }
         private void readingMaintenance()
         {
                 MaintenanceBl ml = new MaintenanceBl();
-                String querry = "select m.mdate,m.price,retCar.RegNum from maintenance m join ReturnCars retCar on retCar.RegNum = m.RegNum";
+                String querry = "select * from maintenance where RegNum='"+cmbxFinanceCarSearch.SelectedItem.ToString()+"'";
                var mlist=ml.readMaintenance(querry);
                 dgvMaintenanceInFinance.Rows.Clear();
-                foreach (var item in mlist)
+            List<float> mCost = new List<float>();
+
+            foreach (var item in mlist)
                 {
+                mCost.Add(item.price);
                     dgvMaintenanceInFinance.Rows.Add(item.regNo, DateTime.Parse(item.date).ToShortDateString(), item.price);
                 }
-            
+            fModel.maintenanceCost = mCost;
+            allCost();  
+        }
+        private void allCost()
+        {
+            float Tprice=0, Tfine=0, TmCost=0;
+            foreach (var item in fModel.price)
+            {
+                Tprice += item;
+            }
+            foreach (var item in fModel.fine)
+            {
+                Tfine += item;
+            }
+            foreach (var item in fModel.maintenanceCost)
+            {
+                TmCost += item;
+            }
+            float AllEarning = (Tprice + Tfine) - TmCost;
+            txtTotalEarned.Text = AllEarning.ToString();
         }
 
         #endregion
@@ -65,7 +96,6 @@ namespace CarRentalManagement.Functionality
         {
            if(cmbxFinanceCarSearch.SelectedItem!=null)
             {
-                readingMaintenance();
                 readingFinanceOfCar();
             }
         }
